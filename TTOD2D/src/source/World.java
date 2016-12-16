@@ -16,6 +16,11 @@ public class World {
         towns = new ArrayList<Town>();
     }
 
+    public World (ArrayList<Dungeon> dungeonsToSet, ArrayList<Town> townsToSet ){
+        dungeons = dungeonsToSet;
+        towns = townsToSet;
+    }
+
     public ArrayList<Dungeon> getDungeons(){
         return dungeons;
     }
