@@ -5,7 +5,7 @@ package source;
  */
 public class Types {
     public enum dungeonType{
-
+        fire, water, earth, wind, ice, light, darkness, poison, lightning, unaspected, nature, metal
     }
 
     public enum buildingType{
