@@ -14,7 +14,7 @@ public class Inn extends Building {
     public Inn(){
         super("Inn", Types.buildingType.Inn);
         npcs = new ArrayList<>();
-        innkeeper = new Innkeeper();
+        innkeeper = new Innkeeper("Unknown Innkeeper");
     }
 
     public Inn(Innkeeper innkeeperToSet, ArrayList<NPC> npcsToSet){
@@ -46,6 +46,11 @@ public class Inn extends Building {
     }
 
     public Status takeADump(){
-        throw new NotImplementedException();
+        Status status = new Status();
+        status.setDuration(5);
+        status.setName("Relaxed");
+        status.setPotency(20);
+        Player.getInstance().setStatus(status);
+        return status;
     }
 }
