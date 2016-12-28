@@ -24,6 +24,17 @@ public class Dungeon {
         isCleared = false;
     }
 
+    public Dungeon(Types.dungeonType dungeonType, int dungeonFloorCount){
+        this();
+        type = dungeonType;
+        floorCount = dungeonFloorCount;
+    }
+
+    public Dungeon(Types.dungeonType dungeonType, int dungeonFloorCount, int minEnemies, int maxEnemies){
+        this(dungeonType, dungeonFloorCount);
+        generateFloors(minEnemies, maxEnemies);
+    }
+
     public Types.dungeonType getType() {
         return type;
     }
