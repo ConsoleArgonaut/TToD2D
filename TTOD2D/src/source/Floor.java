@@ -27,6 +27,6 @@ public class Floor {
     public Combat getNextCombat(){
         Enemy nextEnemy = enemies.get(0);
         enemies.remove(nextEnemy);
-        return new Combat();
+        return new Combat(nextEnemy);
     }
 }
