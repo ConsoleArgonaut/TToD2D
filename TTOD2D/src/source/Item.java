@@ -9,6 +9,7 @@ public class Item {
     private int maxCount;
     private float value;
     private boolean isCombatItem;
+    private Types.itemType type;
 
     public Item(){
         name = "";
@@ -24,4 +25,10 @@ public class Item {
     public void setValue(float valueToSet){value=valueToSet;}
     public boolean getIsCombatItem(){return isCombatItem;}
     public void setIsCombatItem(boolean isCombatItemToSet){isCombatItem=isCombatItemToSet;}
+    public Types.itemType getType() {
+        return type;
+    }
+    public void setType(Types.itemType type) {
+        this.type = type;
+    }
 }

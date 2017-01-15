@@ -13,18 +13,22 @@ public class Types {
     }
 
     public enum playerRace{
-
+        Unknown, Huuman, Dwarf, Dragonpeeps, Big_Daddys
     }
 
     public enum combatActionResult{
-
+        ItemUsed, ItemMissed, Attacked, AttackMissed, Defended, Escaped, Waited, Evolved
     }
 
     public enum effect{
-
+        Good, Unrellenting, Stunned, Burning, Poisoned, Constipated
     }
 
     public enum enemyType{
+        Dragon, Humanoid, Goblinoid, Creature, Shepard, Undead, Lich, Steve, Pinguin, Treant, Dryad, Party_Pooper
+    }
 
+    public enum itemType {
+        Armor, Weapon, Potion, Focus, Poison, Shield,Scrap
     }
 }
