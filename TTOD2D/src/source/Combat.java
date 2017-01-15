@@ -60,11 +60,11 @@ public class Combat {
     /**
      * Use Potion to heal yourself
      */
-    public CombatResult usePotion(Item item) {
+    public CombatResult usePotion(Potion item) {
         CombatResult result = new CombatResult();
         if (item.getType() == Types.itemType.Potion) {
             result.setPlayerAction(Types.combatActionResult.ItemUsed);
-            Player.getInstance().setLife(Player.getInstance().getLife() + Potion.getHealing());
+            Player.getInstance().setLife(Player.getInstance().getLife() + item.getHealing());
         }
         if (CurrentEnemy.getLife() > 0)
             result = enemyMove(result);
