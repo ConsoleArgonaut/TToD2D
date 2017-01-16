@@ -1,5 +1,7 @@
 package source;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 /**
  * Created by Michael on 16.12.2016.
  */
@@ -38,5 +40,13 @@ public class Player extends Character {
     }
     public void setNextLevel(float nextLevel) {
         this.nextLevel = nextLevel;
+    }
+
+    public Player addExperience(float experience){
+        throw new NotImplementedException();
+    }
+
+    private Player levelUp(){
+        throw new NotImplementedException();
     }
 }

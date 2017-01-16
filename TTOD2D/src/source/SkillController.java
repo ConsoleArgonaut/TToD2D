@@ -1,16 +1,25 @@
 package source;
 
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import java.util.ArrayList;
+
 /**
  * Created by Drake on 16.12.2016.
  */
 public class SkillController {
-    public Skill getSkill(int unlockedAt){
-        Skill skillToDefine = new Skill();
+    private ArrayList<Skill> skills;
 
-        switch (unlockedAt){
+    public SkillController(){
+        skills = new ArrayList<>();
+    }
+
+    public Skill getSkill(int level){
+        Skill skillToDefine = new Skill();
+        switch (level){
             case 1:
-                switch (Player.getRace(Types.playerRace)) {
+                switch (Player.getInstance().getRace()) {
                     case Unknown:
 
                         break;
@@ -19,7 +28,7 @@ public class SkillController {
                         skillToDefine.setManaCost(20);
                         skillToDefine.setPotency(1);
                         skillToDefine.setUnlockedAt(1);
-                    case Human:
+
                         skillToDefine.setName("Ice Needle");
                         skillToDefine.setManaCost(20);
                         skillToDefine.setPotency(1);
@@ -30,7 +39,7 @@ public class SkillController {
                         skillToDefine.setManaCost(20);
                         skillToDefine.setPotency(1);
                         skillToDefine.setUnlockedAt(1);
-                    case :
+
                         skillToDefine.setName("Second Wind");
                         skillToDefine.setManaCost(20);
                         skillToDefine.setPotency(1);
@@ -41,8 +50,8 @@ public class SkillController {
                         skillToDefine.setManaCost(20);
                         skillToDefine.setPotency(1);
                         skillToDefine.setUnlockedAt(1);
-                    case :
-                        skillToDefine.setName("iron Hammer");
+
+                        skillToDefine.setName("Iron Hammer");
                         skillToDefine.setManaCost(20);
                         skillToDefine.setPotency(1);
                         skillToDefine.setUnlockedAt(1);
@@ -53,6 +62,10 @@ public class SkillController {
                         skillToDefine.setPotency(1);
                         skillToDefine.setUnlockedAt(1);
 
+                        skillToDefine.setName("Rockbullet");
+                        skillToDefine.setManaCost(20);
+                        skillToDefine.setPotency(1);
+                        skillToDefine.setUnlockedAt(1);
                         break;
                 }
                 skillToDefine.setName("Attack");
@@ -79,7 +92,7 @@ public class SkillController {
                 skillToDefine.setUnlockedAt(6);
                 break;
             case 8:
-                switch (Player.getRace()) {
+                switch (Player.getInstance().getRace()) {
                     case Human:
                         skillToDefine.setName("Ice Blast");
                         skillToDefine.setManaCost(100);
@@ -124,7 +137,7 @@ public class SkillController {
                 skillToDefine.setUnlockedAt(14);
                 break;
             case 16:
-                switch (Player.getRace()) {
+                switch (Player.getInstance().getRace()) {
                     case Human:
                         skillToDefine.setName("Nature's Wrath");
                         skillToDefine.setManaCost(250);
@@ -173,6 +186,33 @@ public class SkillController {
                 skillToDefine.setManaCost(10);
                 skillToDefine.setPotency(8.5);
                 skillToDefine.setUnlockedAt(2);
+
+                switch (Player.getInstance().getRace()) {
+                    case Human:
+                        skillToDefine.setName("Permafrost");
+                        skillToDefine.setManaCost(250);
+                        skillToDefine.setPotency(6.5);
+                        skillToDefine.setUnlockedAt(16);
+                        break;
+                    case Dragonpeeps:
+                        skillToDefine.setName("Fireburst");
+                        skillToDefine.setManaCost(250);
+                        skillToDefine.setPotency(6.5);
+                        skillToDefine.setUnlockedAt(16);
+                        break;
+                    case Big_Daddys:
+                        skillToDefine.setName("Hydraulic Impact");
+                        skillToDefine.setManaCost(250);
+                        skillToDefine.setPotency(6.5);
+                        skillToDefine.setUnlockedAt(16);
+                        break;
+                    case Dwarf:
+                        skillToDefine.setName("Netherworld");
+                        skillToDefine.setManaCost(250);
+                        skillToDefine.setPotency(6.5);
+                        skillToDefine.setUnlockedAt(16);
+                        break;
+                }
                 break;
             default:
                 skillToDefine.setName("Attack");
@@ -183,4 +223,6 @@ public class SkillController {
         }
         return skillToDefine;
     }
+
+    private SkillController initializeSkills() {throw new NotImplementedException();}
 }

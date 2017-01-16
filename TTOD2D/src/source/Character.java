@@ -92,4 +92,5 @@ public abstract class Character {
     public void setImage(String imageToSet){image = imageToSet;}
     public ArrayList<Skill> getSkills(){return skills;}
     public void setSkills(ArrayList<Skill> skillsToSet){skills = skillsToSet;}
+
 }
