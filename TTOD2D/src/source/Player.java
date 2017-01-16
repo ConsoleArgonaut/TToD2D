@@ -21,5 +21,22 @@ public class Player extends Character {
         nextLevel = 0;
     }
 
-
+    public float getExperience() {
+        return experience;
+    }
+    public void setExperience(float experience) {
+        this.experience = experience;
+    }
+    public Types.playerRace getRace() {
+        return race;
+    }
+    public void setRace(Types.playerRace race) {
+        this.race = race;
+    }
+    public float getNextLevel() {
+        return nextLevel;
+    }
+    public void setNextLevel(float nextLevel) {
+        this.nextLevel = nextLevel;
+    }
 }

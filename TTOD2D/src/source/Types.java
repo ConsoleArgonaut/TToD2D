@@ -13,7 +13,7 @@ public class Types {
     }
 
     public enum playerRace{
-        Unknown, Huuman, Dwarf, Dragonpeeps, Big_Daddys
+        Unknown, Human, Dwarf, Dragonpeeps, Big_Daddys
     }
 
     public enum combatActionResult{
