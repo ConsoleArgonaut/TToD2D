@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <SplitPane dividerPositions="0.3341708542713568, 0.7060301507537688" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+      <items>
+        <AnchorPane prefHeight="126.0" prefWidth="598.0">
+          <children>
+            <Button fx:id="btnNewGame" layoutX="206.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#handleOnBtnNewGameClicked" prefHeight="78.0" prefWidth="186.0" text="New Game" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <Button fx:id="btnLoadGame" disable="true" layoutX="206.0" layoutY="32.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="186.0" text="Load Game" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <Button fx:id="btnCredits" layoutX="206.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#onBtnCreditsClicked" prefHeight="78.0" prefWidth="186.0" text="Credits" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
