@@ -13,6 +13,12 @@ public class Dungeon {
 
     private int floorCount;
 
+    public void setName(String name) {
+        Dungeon.name = name;
+    }
+
+    private static String name;
+
     private Types.dungeonType type;
 
     private boolean isCleared;
@@ -22,6 +28,7 @@ public class Dungeon {
         floorCount = 0;
         type = Types.dungeonType.unaspected;
         isCleared = false;
+        name = "";
     }
 
     public Dungeon(Types.dungeonType dungeonType, int dungeonFloorCount){
@@ -73,7 +80,7 @@ public class Dungeon {
             int enemyCount = new Random().nextInt(max - min + 1) + min;
             //if(i == floorCount - 1)
                 //currentFloor.getEnemies().add()
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
     }
 
@@ -88,5 +95,49 @@ public class Dungeon {
                 }
         }
         return floor;
+    }
+
+    public String getName() {
+        String returnValue = name;
+        if(returnValue == "")
+            switch (this.type){
+                case darkness:
+                    returnValue = "Dark dungeon of doom";
+                    break;
+                case earth:
+                    returnValue = "Dungeon of earth";
+                    break;
+                case fire:
+                    returnValue = "Lava temple";
+                    break;
+                case ice:
+                    returnValue = "Snow palace";
+                    break;
+                case light:
+                    returnValue = "Bright place?";
+                    break;
+                case lightning:
+                    returnValue = "Cloud paradise";
+                    break;
+                case metal:
+                    returnValue = "Metal concert";
+                    break;
+                case poison:
+                    returnValue = "Witch village";
+                    break;
+                case nature:
+                    returnValue = "Sunny hill of the evil creatures";
+                    break;
+                case unaspected:
+                    returnValue = "Plain dungeon";
+                    break;
+                case wind:
+                    returnValue = "Dungeon of the blowing wind";
+                    break;
+                case water:
+                    returnValue = "Boat of aqua";
+                    break;
+            }
+        return returnValue;
     }
 }
