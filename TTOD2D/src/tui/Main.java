@@ -1,10 +1,8 @@
 package tui;
 
-import source.Dungeon;
-import source.StoryController;
-import source.Town;
-import source.World;
+import source.*;
 
+import java.lang.Character;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -36,18 +34,42 @@ public class Main {
             locations.add(dungeonname);
         }
         int nextLocation = askQuestion("Where do you wanna go?", locations);
-        if (nextLocation > world.getTowns().size())
+        if (nextLocation < world.getTowns().size())
             goToTown(world.getTowns().get(nextLocation));
         else
             goToDungeon(world.getDungeons().get(world.getDungeons().size() - world.getTowns().size()));
     }
 
     private static void goToTown(Town town){
+        writeline("You are in the middle of the town " + town.getName());
+        seperator();
+        ArrayList<String> buildings = new ArrayList<>();
+        for (Inn i:town.getInns()) {
+            buildings.add(i.getName() + " (Inn)");
+        }
+        for (Shop s: town.getShops()) {
+            buildings.add(s.getName() + " (Shop)");
+        }
+        buildings.add("Back to Worldmap");
+        int nextBuilding = askQuestion("Where do you wanna go?", buildings);
+        if(nextBuilding < town.getInns().size())
+            goToInn(town.getInns().get(nextBuilding));
+        else if (buildings.size() - 1 == nextBuilding)
+            overworld();
+        else
+            goToShop(town.getShops().get(nextBuilding - town.getInns().size()));
+    }
 
+    private static void goToInn(Inn inn){
+        writeline("You entered an Inn, congratulations");
+    }
+
+    private static void goToShop(Shop shop){
+        writeline("You entered an Shop, congratulations");
     }
 
     private static void goToDungeon(Dungeon dungeon){
-
+        writeline("You entered an Dungeon, congratulations");
     }
 
     /** Read line */
