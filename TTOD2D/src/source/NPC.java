@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * Created by Michael on 16.12.2016.
  */
-public class NPC extends Character {
+public class NPC extends Character implements java.io.Serializable {
     private ArrayList<String> sentences;
 
     public NPC(String npcName){

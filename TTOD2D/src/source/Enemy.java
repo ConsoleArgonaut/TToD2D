@@ -3,7 +3,7 @@ package source;
 /**
  * Created by Drake on 16.12.2016.
  */
-public class Enemy extends Character {
+public class Enemy extends Character implements java.io.Serializable {
 
     private Types.enemyType type;
 

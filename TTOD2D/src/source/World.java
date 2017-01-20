@@ -1,13 +1,11 @@
 package source;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.ArrayList;
 
 /**
  * Created by Michael on 16.12.2016.
  */
-public class World {
+public class World implements java.io.Serializable{
     private ArrayList<Dungeon> dungeons;
     private ArrayList<Town> towns;
 

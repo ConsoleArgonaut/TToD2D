@@ -1,14 +1,12 @@
 package source;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.ArrayList;
 import java.util.Random;
 
 /**
  * Created by Michael on 16.12.2016.
  */
-public class Dungeon {
+public class Dungeon implements java.io.Serializable{
     private ArrayList<Floor> floors;
 
     private int floorCount;

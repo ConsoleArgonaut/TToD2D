@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Michael on 16.12.2016.
  */
-public class Trader extends NPC {
+public class Trader extends NPC implements java.io.Serializable {
     public Trader(String traderName){
         super(traderName);
     }

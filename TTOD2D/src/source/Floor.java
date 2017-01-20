@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Michael on 16.12.2016.
  */
-public class Floor {
+public class Floor implements java.io.Serializable {
     private ArrayList<Enemy> enemies;
 
     public Floor(){

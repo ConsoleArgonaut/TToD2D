@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Michael on 16.12.2016.
  */
-public class Shop extends Building {
+public class Shop extends Building implements java.io.Serializable {
     private ArrayList<Trader> traders;
 
     public Shop(){

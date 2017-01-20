@@ -1,13 +1,11 @@
 package source;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.ArrayList;
 
 /**
  * Created by Michael on 16.12.2016.
  */
-public class Inn extends Building {
+public class Inn extends Building implements java.io.Serializable {
     private ArrayList<NPC> npcs;
     private Innkeeper innkeeper;
 

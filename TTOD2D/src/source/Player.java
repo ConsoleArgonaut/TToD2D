@@ -5,7 +5,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 /**
  * Created by Michael on 16.12.2016.
  */
-public class Player extends Character {
+public class Player extends Character implements java.io.Serializable {
     private static Player ourInstance = new Player();
 
     private float experience;
