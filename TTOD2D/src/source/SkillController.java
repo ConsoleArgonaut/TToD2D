@@ -107,7 +107,7 @@ public class SkillController {
                 Player.getInstance().getSkills().add(skillToDefine);
                 break;
             case 6:
-                skillToDefine.setName("cure");
+                skillToDefine.setName("Cure");
                 skillToDefine.setManaCost(50);
                 skillToDefine.setPotency(3);
                 skillToDefine.setUnlockedAt(6);
@@ -227,7 +227,7 @@ public class SkillController {
                         Player.getInstance().getSkills().add(skillToDefine);
                         break;
                     case Dragonpeeps:
-                        skillToDefine.setName("Fireburst");
+                        skillToDefine.setName("Firestorm");
                         skillToDefine.setManaCost(250);
                         skillToDefine.setPotency(8.5);
                         skillToDefine.setUnlockedAt(24);
