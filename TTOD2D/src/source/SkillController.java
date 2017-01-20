@@ -70,7 +70,7 @@ public class SkillController {
                         skillToDefine.setUnlockedAt(1);
                         skills.add(skillToDefine);
 
-                        skillToDefine.setName("Rockbullet");
+                        skillToDefine.setName("Shadoworb");
                         skillToDefine.setManaCost(20);
                         skillToDefine.setPotency(1);
                         skillToDefine.setUnlockedAt(1);
@@ -78,6 +78,12 @@ public class SkillController {
                         break;
                 }
                 skillToDefine.setName("Attack");
+                skillToDefine.setManaCost(0);
+                skillToDefine.setPotency(1);
+                skillToDefine.setUnlockedAt(1);
+                skills.add(skillToDefine);
+
+                skillToDefine.setName("Defense");
                 skillToDefine.setManaCost(0);
                 skillToDefine.setPotency(1);
                 skillToDefine.setUnlockedAt(1);
