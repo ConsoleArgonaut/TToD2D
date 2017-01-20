@@ -70,7 +70,7 @@ public class SkillController {
                         skillToDefine.setUnlockedAt(1);
                         skills.add(skillToDefine);
 
-                        skillToDefine.setName("Dark Endurance");
+                        skillToDefine.setName("Rockbullet");
                         skillToDefine.setManaCost(20);
                         skillToDefine.setPotency(1);
                         skillToDefine.setUnlockedAt(1);
