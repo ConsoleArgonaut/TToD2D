@@ -28,6 +28,7 @@ public class Main {
 
     private static void overworld(){
         while (gameIsActive){
+            seperator();
             int clearedDungeons = 0;
             ArrayList<String> locations = new ArrayList<>();
             for (Town t:world.getTowns()) {
@@ -49,7 +50,7 @@ public class Main {
             if (nextLocation < world.getTowns().size())
                 goToTown(world.getTowns().get(nextLocation));
             else
-                goToDungeon(world.getDungeons().get(world.getDungeons().size() - world.getTowns().size()));
+                goToDungeon(world.getDungeons().get(nextLocation - world.getTowns().size()));
         }
     }
 
@@ -57,6 +58,7 @@ public class Main {
         boolean townIsActive = true;
         while (townIsActive)
         {
+            seperator();
             writeline("You are in the middle of the town " + town.getName());
             seperator();
             ArrayList<String> buildings = new ArrayList<>();
@@ -81,11 +83,12 @@ public class Main {
         boolean innIsActive = true;
         while(innIsActive)
         {
+            seperator();
             writeline("You entered: " + inn.getName());
             seperator();
             int nextMove = 0;
             ArrayList<String> innPossibleMoves = new ArrayList<>();
-            innPossibleMoves.add("Talk to" + inn.getInnkeeper().getName() + " (Innkeeper)");
+            innPossibleMoves.add("Talk to " + inn.getInnkeeper().getName() + " (Innkeeper)");
             innPossibleMoves.add("Take a dump");
             for (NPC npc:inn.getNpcs()) {
                 innPossibleMoves.add("Talk to " + npc.getName());
@@ -114,6 +117,7 @@ public class Main {
     private static void goToInnkeeper(Innkeeper innkeeper){
         boolean innkeeperIsActive = true;
         while(innkeeperIsActive){
+            seperator();
             writeline("You are standing by the innkeeper: " + innkeeper.getName());
             ArrayList<String> innkeeperPossibleMoves = new ArrayList<>();
             innkeeperPossibleMoves.add("Talk");
@@ -142,6 +146,7 @@ public class Main {
     private static void goToShop(Shop shop){
         boolean shopIsActive = true;
         while(shopIsActive){
+            seperator();
             writeline("You are in the shop: " + shop.getName());
             ArrayList<String> possibleShopOptions = new ArrayList<>();
             for (Trader t:shop.getTraders()) {
@@ -159,6 +164,7 @@ public class Main {
     private static void goToTrader(Trader trader){
         boolean traderIsActive = true;
         while(traderIsActive){
+            seperator();
             ArrayList<String> possibleTraderMoves = new ArrayList<>();
             possibleTraderMoves.add("Talk to " + trader.getName());
             int traderItemsBuyable = 0;
@@ -237,6 +243,7 @@ public class Main {
     private static void goToDungeon(Dungeon dungeon){
         boolean dungeonIsActive = true;
         while(dungeonIsActive){
+            seperator();
             writeline("You are at: " + dungeon.getName());
             writeline(dungeon.getFloorCount() + " out of " + dungeon.getFloors().size() + " floors cleared");
             if(dungeon.isCleared()){
@@ -260,6 +267,7 @@ public class Main {
     private static void goToFloor(Floor floor){
         boolean floorIsActive = true;
         while (floorIsActive){
+            seperator();
             if(floor.getEnemiesDefeated() >= 5){
                 writeline("Floor is cleared");
                 floorIsActive = false;
@@ -280,6 +288,7 @@ public class Main {
     }
 
     private static void rollCredits(){
+        seperator();
         writeline(StoryController.getCredits());
         gameIsActive = false;
     }
@@ -343,21 +352,26 @@ public class Main {
     private static int askQuestion(String question, String[] possibleAnswers){
         int returnValue = 0;
         writeline(question);
-        for (int i = 0; i < possibleAnswers.length - 1; i++) {
+        for (int i = 0; i < possibleAnswers.length; i++) {
             writeline((i+1) + ") " + possibleAnswers[i]);
         }
         boolean inputIsCorrect = false;
         while(!inputIsCorrect){
             String input = getInput();
             if(input.length() != 0){
-                char answer = input.toCharArray()[0];
-                returnValue = Character.getNumericValue(answer);
-                returnValue--;
-                if(returnValue >= possibleAnswers.length || returnValue < 0){
-                    writeline("Please answer correctly");
+                try{
+                    returnValue = Integer.parseInt(input);
+                    returnValue--;
+                    if(returnValue >= possibleAnswers.length || returnValue < 0){
+                        writeline("Please answer correctly");
+                    }
+                    else {
+                        inputIsCorrect = true;
+                    }
                 }
-                else {
-                    inputIsCorrect = true;
+                catch (Exception ex){
+                    inputIsCorrect = false;
+                    writeline("Please answer with a number");
                 }
             }
             else
