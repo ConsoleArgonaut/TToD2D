@@ -3,8 +3,11 @@ package tui;
 import source.*;
 
 import java.lang.Character;
+import java.lang.management.PlatformLoggingMXBean;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import static source.Types.combatActionResult.Attacked;
 
 /**
  * Created by Michael on 17.01.2017.
@@ -242,7 +245,7 @@ public class Main {
 
     private static void goToDungeon(Dungeon dungeon){
         boolean dungeonIsActive = true;
-        while(dungeonIsActive){
+        while(dungeonIsActive && gameIsActive){
             seperator();
             writeline("You are at: " + dungeon.getName());
             if(dungeon.isCleared()){
@@ -265,7 +268,7 @@ public class Main {
 
     private static void goToFloor(Floor floor){
         boolean floorIsActive = true;
-        while (floorIsActive){
+        while (floorIsActive && gameIsActive){
             seperator();
             if(floor.getEnemiesDefeated() >= 6){
                 writeline("Floor is cleared");
@@ -283,7 +286,110 @@ public class Main {
     }
 
     private static void doCombat(Combat combat){
+        boolean combatIsActive = true;
+        while (combatIsActive){
+            seperator();
+            writeline(Player.getInstance().getName() + " health: " + Player.getInstance().getLife() + "/" + Player.getInstance().getMaxLife() + " | Mana: " + Player.getInstance().getMana() + "/" + Player.getInstance().getMaxMana());
+            writeline(combat.getCurrentEnemy().getName() + " health: " + combat.getCurrentEnemy().getLife() + "/" + combat.getCurrentEnemy().getMaxLife() + " | Mana: " + combat.getCurrentEnemy().getMana() + "/" + combat.getCurrentEnemy().getMaxMana());
+            seperator();
+            ArrayList<String> possibleMoves = new ArrayList<>();
+            for (Skill s:Player.getInstance().getSkills()) {
+                possibleMoves.add(s.getName());
+            }
+            possibleMoves.add("Use healing potion");
+            possibleMoves.add("Use poison");
+            possibleMoves.add("Wait");
+            possibleMoves.add("Try to flee");
+            int nextMove = askQuestion("What do you wanna do?", possibleMoves);
+            CombatResult result;
+            if(nextMove <= possibleMoves.size() - 5){
+                result = combat.attack(Player.getInstance().getSkills().get(nextMove - 3));
+            }
+            else if(nextMove == possibleMoves.size() - 4){
+                Potion potion = null;
+                for (Item i:Player.getInstance().getItems()) {
+                    if(i.getType() == Types.itemType.Potion) {
+                        potion = (Potion)i;
+                    }
+                }
+                if(potion == null) {
+                    writeline("You didn't have any potions");
+                    result = combat.getAttacked();
+                }
+                else
+                    result = combat.usePotion(potion);
+            }
+            else if (nextMove == possibleMoves.size() - 3){
+                Poison poison = null;
+                for (Item i:Player.getInstance().getItems()) {
+                    if(i.getType() == Types.itemType.Poison) {
+                        poison = (Poison)i;
+                    }
+                }
+                if(poison == null) {
+                    writeline("You didn't have any poisons");
+                    result = combat.getAttacked();
+                }
+                else
+                    result = combat.usePoison(poison);
+            }
+            else if (nextMove == possibleMoves.size() - 2){
+                result = combat.getAttacked();
+            }
+            else{
+                result = combat.flee();
+            }
+            seperator();
+            if(result.getEnemyHadFirstHit())
+                writeline(combat.getCurrentEnemy().getName() + " had first hit.");
+            else
+                writeline(Player.getInstance().getName() + " had first hit.");
+            writeline(Player.getInstance().getName() + getActionName(result.getPlayerAction()));
+            writeline(combat.getCurrentEnemy().getName() + getActionName(result.getEnemyAction()));
+            if(Player.getInstance().getLife() <= 0){
+                writeline(Player.getInstance().getName() + " died");
+                gameIsActive = false;
+                combatIsActive = false;
+            }
+            if(combat.getCurrentEnemy().getLife() <= 0){
+                writeline(combat.getCurrentEnemy().getName() + "was defeated");
+                combatIsActive = false;
+            }
+        }
+    }
 
+    private static String getActionName(Types.combatActionResult result){
+        String returnValue;
+        switch(result){
+            case Attacked:
+                returnValue = " attacked";
+                break;
+            case AttackMissed:
+                returnValue = " missed an attack";
+                break;
+            case Defended:
+                returnValue = " defended himself";
+                break;
+            case ItemUsed:
+                returnValue = " used an item";
+                break;
+            case ItemMissed:
+                returnValue = " tried to use an item but missed";
+                break;
+            case Waited:
+                returnValue = " waited";
+                break;
+            case Evolved:
+                returnValue = " evolved";
+                break;
+            case Escaped:
+                returnValue = " escaped";
+                break;
+            default:
+                returnValue = " pulled of an unknown move";
+                break;
+        }
+        return returnValue;
     }
 
     private static void rollCredits(){
