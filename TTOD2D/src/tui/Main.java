@@ -226,7 +226,30 @@ public class Main {
     }
 
     private static void goToDungeon(Dungeon dungeon){
-        writeline("You entered an Dungeon, congratulations");
+        boolean dungeonIsActive = true;
+        while(dungeonIsActive){
+            writeline("You are at: " + dungeon.getName());
+            writeline(dungeon.getFloorCount() + " out of " + dungeon.getFloors().size() + " floors cleared");
+            if(dungeon.isCleared()){
+                writeline("The dungeon is cleared");
+                seperator();
+                writeline("You went back...");
+            }
+            else {
+                ArrayList<String> possibleDungeonMoves = new ArrayList<>();
+                possibleDungeonMoves.add("Go to next floor");
+                possibleDungeonMoves.add("Exit dungeon");
+                int nextDungeonMove = askQuestion("What do you wanna do?", possibleDungeonMoves);
+                if(nextDungeonMove == 0)
+                    goToFloor(dungeon.getNextFloor());
+                else
+                    dungeonIsActive = false;
+            }
+        }
+    }
+
+    private static void goToFloor(Floor floor){
+
     }
 
     /** Read line */
