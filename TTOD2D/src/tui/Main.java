@@ -23,7 +23,6 @@ public class Main {
         writeline(StoryController.getIntro());
         seperator();
         createCharacter();
-        seperator();
         overworld();
     }
 
