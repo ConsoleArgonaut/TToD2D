@@ -1,6 +1,5 @@
 package tui;
 
-import View.CreditsController;
 import source.*;
 
 import java.lang.Character;
@@ -19,6 +18,8 @@ public class Main {
         writeline("Hello and welcome to The Tower of Doom 2!");
         seperator();
         writeline(StoryController.getIntro());
+        seperator();
+        createCharacter();
         seperator();
         overworld();
     }
@@ -281,6 +282,30 @@ public class Main {
     private static void rollCredits(){
         writeline(StoryController.getCredits());
         gameIsActive = false;
+    }
+
+    private static void createCharacter(){
+        switch(askQuestion("Which race do you wanna be?", new String[]{"Woman", "Dwarf", "Dragonwoman", "Swimming Daddy"})){
+            case 0:
+                Player.getInstance().setRace(Types.playerRace.Human);
+                Player.getInstance().setGender("Woman");
+                break;
+            case 1:
+                Player.getInstance().setRace(Types.playerRace.Dwarf);
+                Player.getInstance().setGender("Male");
+                break;
+            case 2:
+                Player.getInstance().setRace(Types.playerRace.Dragonpeeps);
+                Player.getInstance().setGender("Woman");
+                break;
+            case 3:
+                Player.getInstance().setRace(Types.playerRace.Big_Daddys);
+                Player.getInstance().setGender("Male");
+                break;
+        }
+        seperator();
+        writeline("Whats your name?");
+        Player.getInstance().setName(getInput());
     }
 
     /** Read line */
