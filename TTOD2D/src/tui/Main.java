@@ -148,7 +148,81 @@ public class Main {
     }
 
     private static void goToTrader(Trader trader){
-
+        boolean traderIsActive = true;
+        while(traderIsActive){
+            ArrayList<String> possibleTraderMoves = new ArrayList<>();
+            possibleTraderMoves.add("Talk to " + trader.getName());
+            int traderItemsBuyable = 0;
+            for (Item i:trader.getItems()) {
+                if(trader.getBuyItemPrice(i) > Player.getInstance().getMoney())
+                    traderItemsBuyable++;
+            }
+            if(traderItemsBuyable > 0)
+                possibleTraderMoves.add("Buy something");
+            if(Player.getInstance().getItems().size() > 0)
+                possibleTraderMoves.add("Sell something");
+            possibleTraderMoves.add("Exit");
+            int nextTraderMove = askQuestion("What do you wanna do?", possibleTraderMoves);
+            if(nextTraderMove == 0){
+                writeline(trader.getName() + " said:");
+                seperator();
+                writeline(trader.talk());
+            }
+            else{
+                if(traderItemsBuyable > 0 && Player.getInstance().getItems().size() > 0){}
+                else if (Player.getInstance().getItems().size() > 0){
+                    if(nextTraderMove == 1)
+                        nextTraderMove = 2;
+                    else
+                        nextTraderMove = 3;
+                }
+                else if (traderItemsBuyable > 0){
+                    if(nextTraderMove == 2)
+                        nextTraderMove = 3;
+                }
+                else
+                    nextTraderMove = 3;
+            }
+            if(nextTraderMove == 1){
+                seperator();
+                ArrayList<String> possibleItemsToBuyString = new ArrayList<>();
+                ArrayList<Item> possibleItemsToBuy = new ArrayList<>();
+                for (Item i:trader.getItems()) {
+                    if(trader.getBuyItemPrice(i) > Player.getInstance().getMoney()){
+                        possibleItemsToBuy.add(i);
+                        possibleItemsToBuyString.add(i.getName() + ": " + trader.getBuyItemPrice(i) + " GEIL");
+                    }
+                }
+                possibleItemsToBuyString.add("Nothing");
+                int itemToBuy = askQuestion("What do you wanna buy?", possibleItemsToBuyString);
+                if(itemToBuy != possibleItemsToBuyString.size() - 1){
+                    if(trader.buyItem(possibleItemsToBuy.get(itemToBuy - 1)))
+                        writeline("Successfully bought the item");
+                    else
+                        writeline("Couldn't buy the item");
+                }
+            }
+            if(nextTraderMove == 2){
+                seperator();
+                ArrayList<String> possibleItemsToSellString = new ArrayList<>();
+                ArrayList<Item> possibleItemsToSell = new ArrayList<>();
+                for (Item i:Player.getInstance().getItems()) {
+                     possibleItemsToSell.add(i);
+                     possibleItemsToSellString.add(i.getName() + ": " + trader.getSellItemPrice(i) + " GEIL");
+                }
+                possibleItemsToSellString.add("Nothing");
+                int itemToBuy = askQuestion("What do you wanna sell?", possibleItemsToSellString);
+                if(itemToBuy != possibleItemsToSellString.size() - 1){
+                    if(trader.sellItem(possibleItemsToSell.get(itemToBuy - 1)))
+                        writeline("Successfully sold the item");
+                    else
+                        writeline("Couldn't sell the item");
+                }
+            }
+            if (nextTraderMove == 3){
+                traderIsActive = false;
+            }
+        }
     }
 
     private static void goToDungeon(Dungeon dungeon){
