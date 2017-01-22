@@ -21,7 +21,7 @@ public class Types {
     }
 
     public enum effect{
-        Good, Unrellenting, Stunned, Burning, Poisoned, Constipated
+        Good, Unrelenting, Stunned, Burning, Poisoned, Freezing, Constipated
     }
 
     public enum enemyType{

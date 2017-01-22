@@ -19,7 +19,6 @@ public class Combat {
      */
     public CombatResult attack() {
         CombatResult result = new CombatResult();
-
         result.setEnemyHadFirstHit(enemyHasFirstHit());
 
         //Enemy Attacks first
@@ -100,14 +99,16 @@ public class Combat {
      */
     private boolean enemyHasFirstHit() {
         int playerChance = 0;
-        if (CurrentEnemy.getInitiative() < Player.getInstance().getInitiative())
-            playerChance = playerChance + 2;
-        if (new java.util.Random().nextBoolean())
-            playerChance++;
-        if (playerChance >= 3)
-            return false;
-        else
-            return true;
+        if(!(Player.getInstance().getStatus() = StatusController.getStatus(Types.effect.Stunned))) {
+            if (CurrentEnemy.getInitiative() < Player.getInstance().getInitiative())
+                playerChance = playerChance + 2;
+            if (new java.util.Random().nextBoolean())
+                playerChance++;
+            if (playerChance >= 3)
+                return false;
+            else
+                return true;
+        }
     }
 
     private CombatResult enemyMove(CombatResult result) {
@@ -138,7 +139,7 @@ public class Combat {
     private CombatResult enemyAttacks(CombatResult result) {
         result.setEnemyAction(Types.combatActionResult.Attacked);
         //Calculates Damage
-        result.setPlayerLifeDifference(CurrentEnemy.getAttack() - (Player.getInstance().getDefense() + (Player.getInstance().getArmor() != null ? Player.getInstance().getArmor().getDefence() : 0)));
+        result.setPlayerLifeDifference(CurrentEnemy.getAttack() - (Player.getInstance().getDefense() + (Player.getInstance().getArmor() != null ? Player.getInstance().getArmor().getDefence() : 0)) + (Player.getInstance().getShield() != null ? Player.getInstance().getShield().getDefence() : 0));
         if (!result.getEnemyHadFirstHit() && result.getPlayerAction() == Types.combatActionResult.Defended)
             result.setPlayerLifeDifference(result.getPlayerLifeDifference() - (Player.getInstance().getDefense() + (Player.getInstance().getArmor() != null ? Player.getInstance().getArmor().getDefence() : 0)) / 100 * result.getPlayerLifeDifference());
         //Deals Damage to enemy
