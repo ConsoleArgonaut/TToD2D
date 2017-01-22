@@ -268,7 +268,7 @@ public class Main {
         boolean floorIsActive = true;
         while (floorIsActive){
             seperator();
-            if(floor.getEnemiesDefeated() >= 5){
+            if(floor.getEnemiesDefeated() >= 6){
                 writeline("Floor is cleared");
                 floorIsActive = false;
             }
