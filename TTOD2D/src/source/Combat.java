@@ -254,15 +254,6 @@ public class Combat {
     }
 
     /**
-     * Defend against Enemy
-     */
-    private CombatResult defense() {
-        CombatResult result = new CombatResult();
-        result.setPlayerAction(Types.combatActionResult.Defended);
-        return endRound(enemyMove(result));
-    }
-
-    /**
      * Use Potion to heal yourself
      */
     public CombatResult usePotion(Potion item) {
@@ -400,6 +391,5 @@ public class Combat {
             }
         }
         return result;
-
     }
 }
