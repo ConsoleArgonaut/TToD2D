@@ -132,7 +132,7 @@ public class Combat {
     private CombatResult enemyMove(CombatResult result) {
         //Calculates Enemy Move
         if (CurrentEnemy.getLife() > 0) {
-            if(!(CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Stunned))) {
+            if(!(CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Stunned) || CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Freezing))) {
                 if (result.getEnemyHadFirstHit()) {
                     if (CurrentEnemy.getLife() > (CurrentEnemy.getMaxLife() * 0.25)) {
                         if (new Random().nextBoolean() || new Random().nextBoolean())
@@ -179,12 +179,22 @@ public class Combat {
     private CombatResult endRound(CombatResult result) {
         if (CurrentEnemy.getLife() > 0) {
             if (CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Poisoned) || CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Burning) || CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Freezing)){
-                CurrentEnemy.setLife(CurrentEnemy.getLife() - (StatusController.getStatus(Types.effect.Poisoned).getPotency() || StatusController.getStatus(Types.effect.Burning).getPotency() || StatusController.getStatus(Types.effect.Freezing).getPotency()));
-                if (CurrentEnemy.getItems().size() > 0)
-                    for (Item item : CurrentEnemy.getItems()) {
-                        Player.getInstance().setItems(CurrentEnemy.getItems());
-                    }
-                Player.getInstance().setMoney(Player.getInstance().getMoney() + CurrentEnemy.getMoney());
+                if(CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Poisoned));{
+                    CurrentEnemy.setLife(CurrentEnemy.getLife() - (new StatusController().getStatus(Types.effect.Poisoned).getPotency()));
+                }
+                if(CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Burning));{
+                    CurrentEnemy.setLife(CurrentEnemy.getLife() - (new StatusController().getStatus(Types.effect.Burning).getPotency()));
+                }
+                if(CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Freezing));{
+                    CurrentEnemy.setLife(CurrentEnemy.getLife() - (new StatusController().getStatus(Types.effect.Freezing).getPotency()));
+                }
+                if (CurrentEnemy.getLife() > 0) {
+                    if (CurrentEnemy.getItems().size() > 0)
+                        for (Item item : CurrentEnemy.getItems()) {
+                            Player.getInstance().setItems(CurrentEnemy.getItems());
+                        }
+                    Player.getInstance().setMoney(Player.getInstance().getMoney() + CurrentEnemy.getMoney());
+                }
             }
         }
         return result;
