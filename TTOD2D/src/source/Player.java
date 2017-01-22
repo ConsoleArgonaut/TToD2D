@@ -18,9 +18,19 @@ public class Player extends Character implements java.io.Serializable {
     }
 
     public Player() {
+        setMaxLife(1500);
+        setLife(getMaxLife());
+        setDefense(30);
+        setAttack(40);
+        setLevel(1);
+        setMaxMana(2000);
+        setMana(getMaxMana());
+        setMoney(500);
+        setInitiative(15);
+        setIntelligence(35);
         experience = 0;
         race = Types.playerRace.Unknown;
-        nextLevel = 0;
+        nextLevel = 300;
     }
 
     public float getExperience() {
@@ -42,11 +52,15 @@ public class Player extends Character implements java.io.Serializable {
         this.nextLevel = nextLevel;
     }
 
-    public Player addExperience(float experience){
-        throw new NotImplementedException();
+    public void addExperience(float experience){
+        Player.getInstance().setExperience(Player.getInstance().getExperience() + (Player.getInstance().getNextLevel() / 14));
+        Player.getInstance().levelUp();
     }
 
-    private Player levelUp(){
-        throw new NotImplementedException();
+    private void levelUp(){
+        if(Player.getInstance().getExperience() >= Player.getInstance().getNextLevel()){
+            Player.getInstance().setLevel(Player.getInstance().getLevel() + 1);
+            Player.getInstance().setNextLevel(Player.getInstance().getNextLevel() * 3);
+        }
     }
 }

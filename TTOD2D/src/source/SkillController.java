@@ -248,7 +248,7 @@ public class SkillController {
                         Player.getInstance().getSkills().add(skillToDefine);
                         break;
                 }
-                skillToDefine2.setName("Overdrive");
+                skillToDefine2.setName("ファルコンパンチ (Farukonpanchi)");
                 skillToDefine2.setManaCost(100);
                 skillToDefine2.setPotency((float) 8.5);
                 skillToDefine2.setUnlockedAt(24);
