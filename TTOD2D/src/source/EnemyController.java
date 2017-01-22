@@ -9,8 +9,9 @@ import java.util.ArrayList;
  */
 public class EnemyController {
     private Enemy enemyToDefine = new Enemy();
-    public ArrayList<Enemy> getEnemies(int count, ArrayList<Types.dungeonType> possibleEnemies){
-        throw new NotImplementedException();
+    public ArrayList<Enemy> getEnemies(Types.dungeonType type){
+        ArrayList<Enemy> enemies = new ArrayList<>();
+        return enemies;
     }
 
     public Enemy getFloorBoss(Types.dungeonType type, int currentFloor){
