@@ -35,11 +35,6 @@ public class Dungeon implements java.io.Serializable{
         floorCount = dungeonFloorCount;
     }
 
-    public Dungeon(Types.dungeonType dungeonType, int dungeonFloorCount, int minEnemies, int maxEnemies){
-        this(dungeonType, dungeonFloorCount);
-        generateFloors(minEnemies, maxEnemies);
-    }
-
     public Types.dungeonType getType() {
         return type;
     }
@@ -72,13 +67,13 @@ public class Dungeon implements java.io.Serializable{
         this.floorCount = floorCount;
     }
 
-    public void generateFloors(int min, int max){
+    public void generateFloors(){
         for (int i = 0; i < floorCount; i++) {
-            Floor currentFloor = new Floor();
-            int enemyCount = new Random().nextInt(max - min + 1) + min;
-            //if(i == floorCount - 1)
-                //currentFloor.getEnemies().add()
-            // throw new NotImplementedException();
+            Floor currentFloor;
+            if(i != 4)
+                currentFloor = new Floor(new EnemyController().getEnemies(type), new EnemyController().getFloorBoss(i + 1, type));
+            else
+                currentFloor = new Floor(new EnemyController().getEnemies(type), new EnemyController().getDungeonBoss(type));
         }
     }
 
@@ -87,7 +82,7 @@ public class Dungeon implements java.io.Serializable{
         boolean isSet = false;
         for (Floor x:floors) {
             if(!isSet)
-                if(x.getEnemies().size() != 0) {
+                if(x.getEnemiesDefeated() >= 6) {
                     isSet = true;
                     floor = x;
                 }

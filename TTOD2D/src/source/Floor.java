@@ -1,6 +1,7 @@
 package source;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by Michael on 16.12.2016.
@@ -9,12 +10,16 @@ public class Floor implements java.io.Serializable {
     private ArrayList<Enemy> enemies;
     private int enemiesDefeated = 0;
 
+    private Enemy floorBoss;
+
     public Floor(){
         enemies = new ArrayList<>();
+        floorBoss = new Enemy();
     }
 
-    public Floor(ArrayList<Enemy> enemiesToSet){
+    public Floor(ArrayList<Enemy> enemiesToSet, Enemy floorBossToSet){
         enemies = enemiesToSet;
+        floorBoss = floorBossToSet;
     }
 
     public ArrayList<Enemy> getEnemies(){
@@ -26,12 +31,25 @@ public class Floor implements java.io.Serializable {
     }
 
     public Combat getNextCombat(){
-        Enemy nextEnemy = enemies.get(0);
-        enemies.remove(nextEnemy);
+        Enemy nextEnemy;
+        if(enemiesDefeated == 5)
+            nextEnemy = floorBoss.clone();
+        else
+            nextEnemy = enemies.get(new Random().nextInt(enemies.size() - 1)).clone();
+        enemiesDefeated++;
         return new Combat(nextEnemy);
     }
 
     public int getEnemiesDefeated() {
         return enemiesDefeated;
     }
+
+    public Enemy getFloorBoss() {
+        return floorBoss;
+    }
+
+    public void setFloorBoss(Enemy floorBoss) {
+        this.floorBoss = floorBoss;
+    }
+
 }
