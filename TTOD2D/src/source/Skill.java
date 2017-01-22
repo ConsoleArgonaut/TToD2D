@@ -6,7 +6,7 @@ package source;
 public class Skill {
     private String name = "";
     private float manaCost = 0;
-    private double potency = 0;
+    private float potency = 0;
     private int unlockedAt = 0;
     private Types.playerRace raceLocked = Types.playerRace.Unknown;
 
@@ -22,10 +22,10 @@ public class Skill {
     public void setManaCost(float manaCost) {
         this.manaCost = manaCost;
     }
-    public double getPotency() {
+    public float getPotency() {
         return potency;
     }
-    public void setPotency(double potency) {
+    public void setPotency(float potency) {
         this.potency = potency;
     }
     public int getUnlockedAt() {
