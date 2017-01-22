@@ -9,6 +9,11 @@ import java.util.Random;
 public class Combat {
 
     private Enemy CurrentEnemy;
+    private int Duration;
+
+    public Combat(){
+        Duration = 0;
+    }
 
     public Combat(Enemy enemy) {
         CurrentEnemy = enemy;
@@ -72,13 +77,13 @@ public class Combat {
     }
 
     /**
-     * Use Potion to heal yourself
+     * Use Poison to cose harm to the Enemy
      */
     public CombatResult usePoison(Poison item) {
         CombatResult result = new CombatResult();
         if (item.getType() == Types.itemType.Poison) {
             result.setPlayerAction(Types.combatActionResult.ItemUsed);
-            Player.getInstance().setLife(Player.getInstance().getLife() + item.getPotency());
+            CurrentEnemy.setStatus(new StatusController().getStatus(Types.effect.Poisoned));
         }
         if (CurrentEnemy.getLife() > 0)
             result = enemyMove(result);
@@ -114,39 +119,41 @@ public class Combat {
      */
     private boolean enemyHasFirstHit() {
         int playerChance = 0;
-        if(!(Player.getInstance().getStatus() == new StatusController().getStatus(Types.effect.Stunned))) {
-            if (CurrentEnemy.getInitiative() < Player.getInstance().getInitiative())
-                playerChance = playerChance + 2;
-            if (new java.util.Random().nextBoolean())
-                playerChance++;
-            if (playerChance >= 3)
-                return false;
-            else
-                return true;
-        }
-
+        if (CurrentEnemy.getInitiative() < Player.getInstance().getInitiative())
+            playerChance = playerChance + 2;
+        if (new java.util.Random().nextBoolean())
+            playerChance++;
+        if (playerChance >= 3)
+            return false;
+        else
+            return true;
     }
 
     private CombatResult enemyMove(CombatResult result) {
         //Calculates Enemy Move
         if (CurrentEnemy.getLife() > 0) {
-            if (result.getEnemyHadFirstHit()) {
-                if (CurrentEnemy.getLife() > (CurrentEnemy.getMaxLife() * 0.25)) {
-                    if (new Random().nextBoolean() || new Random().nextBoolean())
+            if(!(CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Stunned))) {
+                if (result.getEnemyHadFirstHit()) {
+                    if (CurrentEnemy.getLife() > (CurrentEnemy.getMaxLife() * 0.25)) {
+                        if (new Random().nextBoolean() || new Random().nextBoolean())
+                            result = enemyAttacks(result);
+                        else
+                            result.setEnemyAction(Types.combatActionResult.Defended);
+                    } else if (new Random().nextBoolean())
                         result = enemyAttacks(result);
-                    else
+                    else if (new Random().nextBoolean() || new Random().nextBoolean())
                         result.setEnemyAction(Types.combatActionResult.Defended);
-                } else if (new Random().nextBoolean())
+                    else
+                        result.setEnemyAction(Types.combatActionResult.Escaped);
+                } else if (new Random().nextBoolean() || new Random().nextBoolean() || new Random().nextBoolean() || new Random().nextBoolean() || new Random().nextBoolean()) {
+                    result.setEnemyAction(Types.combatActionResult.Attacked);
                     result = enemyAttacks(result);
-                else if (new Random().nextBoolean() || new Random().nextBoolean())
-                    result.setEnemyAction(Types.combatActionResult.Defended);
-                else
+                } else
                     result.setEnemyAction(Types.combatActionResult.Escaped);
-            } else if (new Random().nextBoolean() || new Random().nextBoolean() || new Random().nextBoolean() || new Random().nextBoolean() || new Random().nextBoolean()) {
-                result.setEnemyAction(Types.combatActionResult.Attacked);
-                result = enemyAttacks(result);
-            } else
-                result.setEnemyAction(Types.combatActionResult.Escaped);
+                return result;
+            } else {
+                result.setEnemyAction(Types.combatActionResult.Waited);
+            }
             return result;
         }
         return result;
@@ -171,11 +178,14 @@ public class Combat {
 
     private CombatResult endRound(CombatResult result) {
         if (CurrentEnemy.getLife() > 0) {
-            if (CurrentEnemy.getItems().size() > 0)
-                for (Item item : CurrentEnemy.getItems()) {
-                    Player.getInstance().setItems(CurrentEnemy.getItems());
-                }
-            Player.getInstance().setMoney(Player.getInstance().getMoney() + CurrentEnemy.getMoney());
+            if (CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Poisoned) || CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Burning) || CurrentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Freezing)){
+                CurrentEnemy.setLife(CurrentEnemy.getLife() - (StatusController.getStatus(Types.effect.Poisoned).getPotency() || StatusController.getStatus(Types.effect.Burning).getPotency() || StatusController.getStatus(Types.effect.Freezing).getPotency()));
+                if (CurrentEnemy.getItems().size() > 0)
+                    for (Item item : CurrentEnemy.getItems()) {
+                        Player.getInstance().setItems(CurrentEnemy.getItems());
+                    }
+                Player.getInstance().setMoney(Player.getInstance().getMoney() + CurrentEnemy.getMoney());
+            }
         }
         return result;
 
