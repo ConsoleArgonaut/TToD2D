@@ -20,12 +20,24 @@ public class NPC extends Character implements java.io.Serializable {
         sentences = npcSentences;
     }
 
+    public NPC(String npcName, String[] npcSentences){
+        this(npcName);
+        setSentences(npcSentences);
+    }
+
     public ArrayList<String> getSentences(){
         return sentences;
     }
 
     public void setSentences(ArrayList<String> sentencesToSet){
         sentences=sentencesToSet;
+    }
+
+    public void setSentences(String[] sentencesToSet){
+        sentences = new ArrayList<>();
+        for (String sentence:sentencesToSet) {
+            sentences.add(sentence);
+        }
     }
 
     public String talk(){
