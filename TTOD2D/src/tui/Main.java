@@ -249,6 +249,24 @@ public class Main {
     }
 
     private static void goToFloor(Floor floor){
+        boolean floorIsActive = true;
+        while (floorIsActive){
+            if(floor.getEnemiesDefeated() >= 5){
+                writeline("Floor is cleared");
+                floorIsActive = false;
+            }
+            else{
+                if(askQuestion("Do you wanna keep on going?", new String[]{"Yes", "No"}) == 0){
+                    doCombat(floor.getNextCombat());
+                }
+                else{
+                    floorIsActive = false;
+                }
+            }
+        }
+    }
+
+    private static void doCombat(Combat combat){
 
     }
 
