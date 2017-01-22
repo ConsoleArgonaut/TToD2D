@@ -64,17 +64,30 @@ public class World implements java.io.Serializable{
     }
 
     private void generateDefaultDungeons(){
-        dungeons.add(new Dungeon(Types.dungeonType.darkness, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.earth, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.fire, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.ice, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.light, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.lightning, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.metal, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.nature, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.poison, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.unaspected, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.water, 5, 5, 10));
-        dungeons.add(new Dungeon(Types.dungeonType.wind, 5, 5, 10));
+        dungeons.add(new Dungeon(Types.dungeonType.darkness, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.earth, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.fire, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.ice, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.light, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.lightning, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.metal, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.nature, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.poison, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.unaspected, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.water, 5));
+        dungeons.add(new Dungeon(Types.dungeonType.wind, 5));
+    }
+
+    private void generateDefaultPlayer(){
+        Weapon stick = new Weapon();
+        stick.setName("A salty stick");
+        stick.setValue(20);
+        stick.setMaxCount(1);
+        stick.setAttack(10);
+        stick.setCritChance(20);
+        stick.setIsCombatItem(true);
+        stick.setType(Types.itemType.Weapon);
+        Player.getInstance().getItems().add(stick);
+
     }
 }

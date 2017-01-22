@@ -245,7 +245,6 @@ public class Main {
         while(dungeonIsActive){
             seperator();
             writeline("You are at: " + dungeon.getName());
-            writeline(dungeon.getFloorCount() + " out of " + dungeon.getFloors().size() + " floors cleared");
             if(dungeon.isCleared()){
                 writeline("The dungeon is cleared");
                 seperator();

@@ -33,6 +33,7 @@ public class Dungeon implements java.io.Serializable{
         this();
         type = dungeonType;
         floorCount = dungeonFloorCount;
+        generateFloors();
     }
 
     public Types.dungeonType getType() {
