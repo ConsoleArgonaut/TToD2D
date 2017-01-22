@@ -9,18 +9,726 @@ import java.util.ArrayList;
  */
 public class EnemyController {
     private Enemy enemyToDefine = new Enemy();
-    public ArrayList<Enemy> getEnemies(int count, ArrayList<Types.enemyType> possibleEnemies){
+    public ArrayList<Enemy> getEnemies(int count, ArrayList<Types.dungeonType> possibleEnemies){
         throw new NotImplementedException();
     }
 
-    public Enemy getFloorBoss(Types.enemyType type, int currentFloor, int maxFloor){
-        throw new NotImplementedException();
+    public Enemy getFloorBoss(Types.dungeonType type, int currentFloor){
+        if(type == Types.dungeonType.fire){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Firelizards");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Firelizards");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Firelizards");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Firelizards");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Firelizards");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.water){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Waterserpent");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Waterserpent");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Waterserpent");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Waterserpent");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Waterserpent");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.earth){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Mudgolem");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Mudgolem");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Mudgolem");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Mudgolem");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Mudgolem");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.wind){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Gustfiend");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Gustfiend");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Gustfiend");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Gustfiend");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Gustfiend");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.ice){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Icewurm");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Icewurm");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Icewurm");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Icewurm");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Icewurm");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.light){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("General of Light");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("General of Light");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("General of Light");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("General of Light");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("General of Light");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.darkness){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("General of Darkness");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("General of Darkness");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("General of Darkness");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("General of Darkness");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("General of Darkness");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.poison){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Roppers");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Roppers");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Roppers");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Roppers");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Roppers");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.lightning){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Lightningbird");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Lightningbird");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Lightningbird");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Lightningbird");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Lightningbird");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.unaspected){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Banditlord");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Banditlord");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Banditlord");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Banditlord");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Banditlord");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.nature){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Nature Guardian");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Nature Guardian");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Nature Guardian");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Nature Guardian");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Nature Guardian");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        if(type == Types.dungeonType.metal){
+            switch (currentFloor){
+                case 1:
+                    enemyToDefine.setName("Iron Protectors");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 2:
+                    enemyToDefine.setName("Iron Protectors");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 3:
+                    enemyToDefine.setName("Iron Protectors");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 4:
+                    enemyToDefine.setName("Iron Protectors");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+                case 5:
+                    enemyToDefine.setName("Iron Protectors");
+                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setLife(enemyToDefine.getMaxLife());
+                    enemyToDefine.setDefense(30);
+                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setIntelligence(10);
+                    enemyToDefine.setInitiative(20);
+                    enemyToDefine.setMoney(500);
+                    enemyToDefine.setType(Types.enemyType.Dragon);
+                    break;
+            }
+        }
+        return enemyToDefine;
     }
 
     public Enemy getDungeonBoss(Types.dungeonType type){
         switch (type){
             case fire:
-                enemyToDefine.setName("Firelizards");
+                enemyToDefine.setName("Salamander");
                 enemyToDefine.setMaxLife(1000);
                 enemyToDefine.setLife(enemyToDefine.getMaxLife());
                 enemyToDefine.setDefense(50);
@@ -31,7 +739,7 @@ public class EnemyController {
                 enemyToDefine.setType(Types.enemyType.Dragon);
                 break;
             case water:
-                enemyToDefine.setName("Waterserpent");
+                enemyToDefine.setName("Levaiathan");
                 enemyToDefine.setMaxLife(800);
                 enemyToDefine.setLife(enemyToDefine.getMaxLife());
                 enemyToDefine.setDefense(50);
