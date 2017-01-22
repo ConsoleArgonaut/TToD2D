@@ -387,7 +387,7 @@ public class Combat {
                 if (currentEnemy.getLife() > 0) {
                     if (currentEnemy.getItems().size() > 0)
                         for (Item item : currentEnemy.getItems()) {
-                            Player.getInstance().setItems(currentEnemy.getItems());
+                            Player.getInstance().getItems().add(item);
                         }
                     Player.getInstance().setMoney(Player.getInstance().getMoney() + currentEnemy.getMoney());
                     Player.getInstance().addExperience(1);
