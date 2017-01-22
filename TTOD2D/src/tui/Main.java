@@ -22,46 +22,88 @@ public class Main {
         overworld();
     }
 
+    private static boolean gameIsActive = true;
+
     private static void overworld(){
-        ArrayList<String> locations = new ArrayList<>();
-        for (Town t:world.getTowns()) {
-            locations.add(t.getName() + " (Town)");
+        while (gameIsActive){
+            ArrayList<String> locations = new ArrayList<>();
+            for (Town t:world.getTowns()) {
+                locations.add(t.getName() + " (Town)");
+            }
+            for (Dungeon d:world.getDungeons()) {
+                String dungeonname = d.getName();
+                if(d.isCleared())
+                    dungeonname += " (Cleared)";
+                locations.add(dungeonname);
+            }
+            int nextLocation = askQuestion("Where do you wanna go?", locations);
+            if (nextLocation < world.getTowns().size())
+                goToTown(world.getTowns().get(nextLocation));
+            else
+                goToDungeon(world.getDungeons().get(world.getDungeons().size() - world.getTowns().size()));
         }
-        for (Dungeon d:world.getDungeons()) {
-            String dungeonname = d.getName();
-            if(d.isCleared())
-                dungeonname += " (Cleared)";
-            locations.add(dungeonname);
-        }
-        int nextLocation = askQuestion("Where do you wanna go?", locations);
-        if (nextLocation < world.getTowns().size())
-            goToTown(world.getTowns().get(nextLocation));
-        else
-            goToDungeon(world.getDungeons().get(world.getDungeons().size() - world.getTowns().size()));
     }
 
     private static void goToTown(Town town){
-        writeline("You are in the middle of the town " + town.getName());
-        seperator();
-        ArrayList<String> buildings = new ArrayList<>();
-        for (Inn i:town.getInns()) {
-            buildings.add(i.getName() + " (Inn)");
+        boolean townIsActive = true;
+        while (townIsActive)
+        {
+            writeline("You are in the middle of the town " + town.getName());
+            seperator();
+            ArrayList<String> buildings = new ArrayList<>();
+            for (Inn i:town.getInns()) {
+                buildings.add(i.getName() + " (Inn)");
+            }
+            for (Shop s: town.getShops()) {
+                buildings.add(s.getName() + " (Shop)");
+            }
+            buildings.add("Back to Worldmap");
+            int nextBuilding = askQuestion("Where do you wanna go?", buildings);
+            if(nextBuilding < town.getInns().size())
+                goToInn(town.getInns().get(nextBuilding));
+            else if (buildings.size() - 1 == nextBuilding)
+                townIsActive = false;
+            else
+                goToShop(town.getShops().get(nextBuilding - town.getInns().size()));
         }
-        for (Shop s: town.getShops()) {
-            buildings.add(s.getName() + " (Shop)");
-        }
-        buildings.add("Back to Worldmap");
-        int nextBuilding = askQuestion("Where do you wanna go?", buildings);
-        if(nextBuilding < town.getInns().size())
-            goToInn(town.getInns().get(nextBuilding));
-        else if (buildings.size() - 1 == nextBuilding)
-            overworld();
-        else
-            goToShop(town.getShops().get(nextBuilding - town.getInns().size()));
     }
 
-    private static void goToInn(Inn inn){
-        writeline("You entered an Inn, congratulations");
+    private static void goToInn(Inn inn) {
+        boolean innIsActive = true;
+        while(innIsActive)
+        {
+            writeline("You entered: " + inn.getName());
+            seperator();
+            int nextMove = 0;
+            ArrayList<String> innPossibleMoves = new ArrayList<>();
+            innPossibleMoves.add("Talk to" + inn.getInnkeeper().getName() + " (Innkeeper)");
+            innPossibleMoves.add("Take a dump");
+            for (NPC npc:inn.getNpcs()) {
+                innPossibleMoves.add("Talk to " + npc.getName());
+            }
+            innPossibleMoves.add("Exit inn");
+            nextMove = askQuestion("What do you wanna do?", innPossibleMoves);
+            if(nextMove == 0)
+                goToInnkeeper(inn.getInnkeeper());
+            else if(nextMove == 1){
+                writeline("You took a dump");
+                inn.takeADump();
+            }
+            else if(nextMove == innPossibleMoves.size() - 1)
+                innIsActive = false;
+            else{
+                NPC npcToTalkTo = inn.getNpcs().get(nextMove - 2);
+                writeline(npcToTalkTo.getName() + "said: ");
+                seperator();
+                writeline(npcToTalkTo.talk());
+            }
+
+        }
+
+    }
+
+    private static void goToInnkeeper(Innkeeper innkeeper){
+
     }
 
     private static void goToShop(Shop shop){
