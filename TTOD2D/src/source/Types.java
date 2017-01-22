@@ -5,7 +5,7 @@ package source;
  */
 public class Types {
     public enum dungeonType{
-        fire, water, earth, wind, ice, light, darkness, poison, lightning, unaspected, nature, metal
+        fire, water, earth, wind, ice, light, darkness, poison, lightning, unaspected, nature, metal, death
     }
 
     public enum buildingType{
@@ -25,7 +25,7 @@ public class Types {
     }
 
     public enum enemyType{
-        Dragon, Humanoid, Goblinoid, Creature, Shepard, Undead, Lich, Steve, Pinguin, Treant, Dryad, Party_Pooper
+        Dragon, Humanoid, Goblinoid, Creature, Shepard, Undead, Lich, Steve, Pinguin, Treant, Dryad, Party_Pooper, Plant, Golem, Bird, Phantom, Titan
     }
 
     public enum itemType {
