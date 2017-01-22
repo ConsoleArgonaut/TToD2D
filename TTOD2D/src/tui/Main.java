@@ -1,5 +1,6 @@
 package tui;
 
+import View.CreditsController;
 import source.*;
 
 import java.lang.Character;
@@ -26,16 +27,23 @@ public class Main {
 
     private static void overworld(){
         while (gameIsActive){
+            int clearedDungeons = 0;
             ArrayList<String> locations = new ArrayList<>();
             for (Town t:world.getTowns()) {
                 locations.add(t.getName() + " (Town)");
             }
             for (Dungeon d:world.getDungeons()) {
                 String dungeonname = d.getName();
-                if(d.isCleared())
+                if(d.isCleared()){
                     dungeonname += " (Cleared)";
+                    clearedDungeons++;
+                }
                 locations.add(dungeonname);
             }
+
+            if(clearedDungeons == world.getDungeons().size())
+                rollCredits();
+
             int nextLocation = askQuestion("Where do you wanna go?", locations);
             if (nextLocation < world.getTowns().size())
                 goToTown(world.getTowns().get(nextLocation));
@@ -268,6 +276,11 @@ public class Main {
 
     private static void doCombat(Combat combat){
 
+    }
+
+    private static void rollCredits(){
+        writeline(StoryController.getCredits());
+        gameIsActive = false;
     }
 
     /** Read line */
