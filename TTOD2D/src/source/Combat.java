@@ -20,6 +20,7 @@ public class Combat {
     public CombatResult attack() {
         CombatResult result = new CombatResult();
         result.setEnemyHadFirstHit(enemyHasFirstHit());
+        Skill skill = new Skill();
 
         //Enemy Attacks first
         if (result.getEnemyHadFirstHit())
@@ -71,6 +72,20 @@ public class Combat {
     }
 
     /**
+     * Use Potion to heal yourself
+     */
+    public CombatResult usePoison(Poison item) {
+        CombatResult result = new CombatResult();
+        if (item.getType() == Types.itemType.Poison) {
+            result.setPlayerAction(Types.combatActionResult.ItemUsed);
+            Player.getInstance().setLife(Player.getInstance().getLife() + item.getPotency());
+        }
+        if (CurrentEnemy.getLife() > 0)
+            result = enemyMove(result);
+        return endRound(result);
+    }
+
+    /**
      * Escape from Combat
      */
     public CombatResult flee() {
@@ -99,7 +114,7 @@ public class Combat {
      */
     private boolean enemyHasFirstHit() {
         int playerChance = 0;
-        if(!(Player.getInstance().getStatus() = StatusController.getStatus(Types.effect.Stunned))) {
+        if(!(Player.getInstance().getStatus() == new StatusController().getStatus(Types.effect.Stunned))) {
             if (CurrentEnemy.getInitiative() < Player.getInstance().getInitiative())
                 playerChance = playerChance + 2;
             if (new java.util.Random().nextBoolean())
@@ -109,6 +124,7 @@ public class Combat {
             else
                 return true;
         }
+
     }
 
     private CombatResult enemyMove(CombatResult result) {
