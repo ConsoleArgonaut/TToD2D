@@ -103,7 +103,30 @@ public class Main {
     }
 
     private static void goToInnkeeper(Innkeeper innkeeper){
+        boolean innkeeperIsActive = true;
+        while(innkeeperIsActive){
+            ArrayList<String> innkeeperPossibleMoves = new ArrayList<>();
+            innkeeperPossibleMoves.add("Talk");
+            innkeeperPossibleMoves.add("Get a room to sleep in " + innkeeper.getRoomPrice() + " GEIL");
+            innkeeperPossibleMoves.add("Exit");
 
+            switch(askQuestion("What do you wanna do?", innkeeperPossibleMoves)){
+                case 0:
+                    writeline(innkeeper.getName() + "said: ");
+                    seperator();
+                    writeline(innkeeper.talk());
+                    break;
+                case 1:
+                    if(innkeeper.goSleeping())
+                        writeline("You slept in the inn");
+                    else
+                        writeline("You didn't have enough GEIL for the room");
+                    break;
+                case 2:
+                    innkeeperIsActive = false;
+                    break;
+            }
+        }
     }
 
     private static void goToShop(Shop shop){
