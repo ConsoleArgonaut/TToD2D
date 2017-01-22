@@ -70,10 +70,10 @@ public class Dungeon implements java.io.Serializable{
     public void generateFloors(){
         for (int i = 0; i < floorCount; i++) {
             Floor currentFloor;
-            if(i != 5)
-                Floor currentFloor = new Floor(new EnemyController().getEnemies(type), new EnemyController().getFloorBoss(i + 1, type));
+            if(i != 4)
+                currentFloor = new Floor(new EnemyController().getEnemies(type), new EnemyController().getFloorBoss(i + 1, type));
             else
-                Floor currentFloor = new Floor(new EnemyController().getEnemies(type), new EnemyController().getDungeonBoss(type));
+                currentFloor = new Floor(new EnemyController().getEnemies(type), new EnemyController().getDungeonBoss(type));
         }
     }
 
