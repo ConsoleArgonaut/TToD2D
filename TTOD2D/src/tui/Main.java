@@ -46,14 +46,46 @@ public class Main {
                 locations.add(dungeonname);
             }
 
+            locations.add("Set best equipment");
+
             if(clearedDungeons == world.getDungeons().size())
                 rollCredits();
 
             int nextLocation = askQuestion("Where do you wanna go?", locations);
             if (nextLocation < world.getTowns().size())
                 goToTown(world.getTowns().get(nextLocation));
-            else
+            else if (nextLocation >= world.getTowns().size() && nextLocation <= locations.size() - 2)
                 goToDungeon(world.getDungeons().get(nextLocation - world.getTowns().size()));
+            else {
+                seperator();
+                for (Item i: Player.getInstance().getItems()) {
+                    switch (i.getType()){
+                        case Weapon:
+                            Weapon w = (Weapon)i;
+                            if(Player.getInstance().getWeapon() == null || w.getAttack() > Player.getInstance().getWeapon().getAttack())
+                                Player.getInstance().setWeapon(w);
+                            break;
+                        case Shield:
+                            Shield s = (Shield)i;
+                            if(Player.getInstance().getShield() == null || s.getDefence() > Player.getInstance().getShield().getDefence())
+                                Player.getInstance().setShield(s);
+                            break;
+                        case Armor:
+                            Armor a = (Armor)i;
+                            if(Player.getInstance().getArmor() == null || a.getDefence() > Player.getInstance().getArmor().getDefence())
+                                Player.getInstance().setArmor(a);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                if(Player.getInstance().getWeapon() != null)
+                    writeline("Weapon: " + Player.getInstance().getWeapon().getName());
+                if(Player.getInstance().getArmor() != null)
+                    writeline("Armor: " + Player.getInstance().getArmor().getName());
+                if(Player.getInstance().getShield() != null)
+                    writeline("Shield: " + Player.getInstance().getShield().getName());
+            }
         }
     }
 
