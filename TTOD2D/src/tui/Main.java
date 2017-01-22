@@ -105,6 +105,7 @@ public class Main {
     private static void goToInnkeeper(Innkeeper innkeeper){
         boolean innkeeperIsActive = true;
         while(innkeeperIsActive){
+            writeline("You are standing by the innkeeper: " + innkeeper.getName());
             ArrayList<String> innkeeperPossibleMoves = new ArrayList<>();
             innkeeperPossibleMoves.add("Talk");
             innkeeperPossibleMoves.add("Get a room to sleep in " + innkeeper.getRoomPrice() + " GEIL");
@@ -130,7 +131,24 @@ public class Main {
     }
 
     private static void goToShop(Shop shop){
-        writeline("You entered an Shop, congratulations");
+        boolean shopIsActive = true;
+        while(shopIsActive){
+            writeline("You are in the shop: " + shop.getName());
+            ArrayList<String> possibleShopOptions = new ArrayList<>();
+            for (Trader t:shop.getTraders()) {
+                possibleShopOptions.add("Go to trader: " + t.getName());
+            }
+            possibleShopOptions.add("Exit");
+            int shopMove = askQuestion("What do you wanna do?", possibleShopOptions);
+            if(shopMove == possibleShopOptions.size() - 1)
+                shopIsActive = false;
+            else
+                goToTrader(shop.getTraders().get(shopMove));
+        }
+    }
+
+    private static void goToTrader(Trader trader){
+
     }
 
     private static void goToDungeon(Dungeon dungeon){
