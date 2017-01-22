@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class Floor implements java.io.Serializable {
     private ArrayList<Enemy> enemies;
+    private int enemiesDefeated = 0;
 
     public Floor(){
         enemies = new ArrayList<>();
@@ -28,5 +29,9 @@ public class Floor implements java.io.Serializable {
         Enemy nextEnemy = enemies.get(0);
         enemies.remove(nextEnemy);
         return new Combat(nextEnemy);
+    }
+
+    public int getEnemiesDefeated() {
+        return enemiesDefeated;
     }
 }
