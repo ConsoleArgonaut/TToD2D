@@ -115,10 +115,10 @@ public class Main {
 
     private static void goToInn(Inn inn) {
         boolean innIsActive = true;
+        seperator();
+        writeline("You entered: " + inn.getName());
         while(innIsActive)
         {
-            seperator();
-            writeline("You entered: " + inn.getName());
             seperator();
             int nextMove = 0;
             ArrayList<String> innPossibleMoves = new ArrayList<>();
@@ -150,17 +150,17 @@ public class Main {
 
     private static void goToInnkeeper(Innkeeper innkeeper){
         boolean innkeeperIsActive = true;
+        seperator();
+        writeline("You are standing by the innkeeper: " + innkeeper.getName());
         while(innkeeperIsActive){
             seperator();
-            writeline("You are standing by the innkeeper: " + innkeeper.getName());
             ArrayList<String> innkeeperPossibleMoves = new ArrayList<>();
             innkeeperPossibleMoves.add("Talk");
             innkeeperPossibleMoves.add("Get a room to sleep in " + innkeeper.getRoomPrice() + " GEIL");
             innkeeperPossibleMoves.add("Exit");
-
-            switch(askQuestion("What do you wanna do?", innkeeperPossibleMoves)){
+            switch(askQuestion("What do you wanna do? (GEIL: " + Player.getInstance().getMoney() + ")" , innkeeperPossibleMoves)){
                 case 0:
-                    writeline(innkeeper.getName() + "said: ");
+                    writeline(innkeeper.getName() + " said: ");
                     seperator();
                     writeline(innkeeper.talk());
                     break;
@@ -211,7 +211,9 @@ public class Main {
             if(Player.getInstance().getItems().size() > 0)
                 possibleTraderMoves.add("Sell something");
             possibleTraderMoves.add("Exit");
-            int nextTraderMove = askQuestion("What do you wanna do?", possibleTraderMoves);
+            writeline(trader.getName() + " GEIL: " + trader.getMoney());
+            seperator();
+            int nextTraderMove = askQuestion("What do you wanna do? (GEIL: " +Player.getInstance().getMoney() + ")" , possibleTraderMoves);
             if(nextTraderMove == 0){
                 writeline(trader.getName() + " said:");
                 seperator();
@@ -237,7 +239,7 @@ public class Main {
                 ArrayList<String> possibleItemsToBuyString = new ArrayList<>();
                 ArrayList<Item> possibleItemsToBuy = new ArrayList<>();
                 for (Item i:trader.getItems()) {
-                    if(trader.getBuyItemPrice(i) > Player.getInstance().getMoney()){
+                    if(trader.getBuyItemPrice(i) < Player.getInstance().getMoney()){
                         possibleItemsToBuy.add(i);
                         possibleItemsToBuyString.add(i.getName() + ": " + trader.getBuyItemPrice(i) + " GEIL");
                     }
@@ -245,7 +247,7 @@ public class Main {
                 possibleItemsToBuyString.add("Nothing");
                 int itemToBuy = askQuestion("What do you wanna buy?", possibleItemsToBuyString);
                 if(itemToBuy != possibleItemsToBuyString.size() - 1){
-                    if(trader.buyItem(possibleItemsToBuy.get(itemToBuy - 1)))
+                    if(trader.buyItem(possibleItemsToBuy.get(itemToBuy)))
                         writeline("Successfully bought the item");
                     else
                         writeline("Couldn't buy the item");
@@ -262,7 +264,7 @@ public class Main {
                 possibleItemsToSellString.add("Nothing");
                 int itemToBuy = askQuestion("What do you wanna sell?", possibleItemsToSellString);
                 if(itemToBuy != possibleItemsToSellString.size() - 1){
-                    if(trader.sellItem(possibleItemsToSell.get(itemToBuy - 1)))
+                    if(trader.sellItem(possibleItemsToSell.get(itemToBuy)))
                         writeline("Successfully sold the item");
                     else
                         writeline("Couldn't sell the item");
@@ -386,6 +388,9 @@ public class Main {
                 writeline(combat.getCurrentEnemy().getName() + "was defeated");
                 combatIsActive = false;
             }
+            if(result.getPlayerAction() == Types.combatActionResult.Escaped){
+                combatIsActive = false;
+            }
         }
     }
 
@@ -482,7 +487,7 @@ public class Main {
     }
     /** Writes a separator to separate printlines */
     private static void seperator(){
-        System.out.println("[]---------------------------------------------------------------------[]");
+        System.out.println("[]------------------------------------------------------------------------------------------------------------------------------[]");
     }
     /** Ask a Question and get Answer */
     private static int askQuestion(String question, String[] possibleAnswers){

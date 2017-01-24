@@ -70,7 +70,7 @@ public class World implements java.io.Serializable{
     }
 
     private void generateDefaultTown2(){
-        Town town = towns.get(0);
+        Town town = new Town();
         town.setName("Necroma");
         Inn inn = new Inn();
         inn.setName("My beer for your horse");
@@ -125,6 +125,7 @@ public class World implements java.io.Serializable{
         witch.getSentences().add("Witches are not able to cast magic. But we can create poisons and potions.");
         witch.setMoney(200);
         shop.getTraders().add(witch);
+        town.getShops().add(shop);
         towns.add(town);
     }
 

@@ -25,6 +25,12 @@ public class Trader extends NPC implements java.io.Serializable {
     public boolean sellItem(Item item){
         if(Player.getInstance().getMoney() > getSellItemPrice(item)){
             if(Player.getInstance().getItems().contains(item)) {
+                if(Player.getInstance().getArmor() == item)
+                    Player.getInstance().setArmor(null);
+                if(Player.getInstance().getWeapon() == item)
+                    Player.getInstance().setWeapon(null);
+                if(Player.getInstance().getShield() == item)
+                    Player.getInstance().setShield(null);
                 Player.getInstance().getItems().remove(item);
                 getItems().add(item);
                 Player.getInstance().setMoney(Player.getInstance().getMoney() - getSellItemPrice(item));
@@ -42,8 +48,8 @@ public class Trader extends NPC implements java.io.Serializable {
             int itemPrice = (int)item.getValue();
             if(getMoney() < itemPrice)
                 itemPrice = getMoney();
-            setMoney(getMoney() - itemPrice);
-            Player.getInstance().setMoney(Player.getInstance().getMoney() + itemPrice);
+            setMoney(getMoney() + itemPrice);
+            Player.getInstance().setMoney(Player.getInstance().getMoney() - itemPrice);
             Player.getInstance().getItems().add(item);
             return true;
         }
