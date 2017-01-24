@@ -323,11 +323,11 @@ public class Main {
         while (combatIsActive){
             seperator();
             writeline(Player.getInstance().getName() + " health: " + Player.getInstance().getLife() + "/" + Player.getInstance().getMaxLife() + " | Mana: " + Player.getInstance().getMana() + "/" + Player.getInstance().getMaxMana());
-            writeline(combat.getCurrentEnemy().getName() + " health: " + combat.getCurrentEnemy().getLife() + "/" + combat.getCurrentEnemy().getMaxLife() + " | Mana: " + combat.getCurrentEnemy().getMana() + "/" + combat.getCurrentEnemy().getMaxMana());
+            writeline(combat.getCurrentEnemy().getName() + " health: " + combat.getCurrentEnemy().getLife() + "/" + combat.getCurrentEnemy().getMaxLife() + " | GEIL: " + combat.getCurrentEnemy().getMoney());
             seperator();
             ArrayList<String> possibleMoves = new ArrayList<>();
             for (Skill s:Player.getInstance().getSkills()) {
-                possibleMoves.add(s.getName());
+                possibleMoves.add(s.getName() + "(Mana: " + s.getManaCost() + ")");
             }
             possibleMoves.add("Use healing potion");
             possibleMoves.add("Use poison");

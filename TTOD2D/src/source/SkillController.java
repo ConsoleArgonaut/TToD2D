@@ -6,13 +6,7 @@ import java.util.ArrayList;
  * Created by Drake on 16.12.2016.
  */
 public class SkillController {
-    private ArrayList<Skill> skills;
-    
-    public SkillController(){
-        skills = new ArrayList<>();
-    }
-
-    public ArrayList<Skill> getSkill(int level){
+    public static void getSkill(int level){
         Skill skillToDefine = new Skill();
         Skill skillToDefine2 = new Skill();
         Skill skillToDefine3 = new Skill();
@@ -263,13 +257,5 @@ public class SkillController {
                 Player.getInstance().getSkills().add(skillToDefine);
                 break;
         }
-        return skills;
-    }
-
-    public ArrayList<Skill> getSkills() {
-        return skills;
-    }
-    public void setSkills(ArrayList<Skill> skills) {
-        this.skills = skills;
     }
 }
