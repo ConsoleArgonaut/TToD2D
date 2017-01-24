@@ -336,7 +336,7 @@ public class Main {
             int nextMove = askQuestion("What do you wanna do?", possibleMoves);
             CombatResult result;
             if(nextMove <= possibleMoves.size() - 5){
-                result = combat.attack(Player.getInstance().getSkills().get(nextMove - 3));
+                result = combat.attack(Player.getInstance().getSkills().get(nextMove));
             }
             else if(nextMove == possibleMoves.size() - 4){
                 Potion potion = null;
@@ -385,7 +385,7 @@ public class Main {
                 combatIsActive = false;
             }
             if(combat.getCurrentEnemy().getLife() <= 0){
-                writeline(combat.getCurrentEnemy().getName() + "was defeated");
+                writeline(combat.getCurrentEnemy().getName() + " was defeated");
                 combatIsActive = false;
             }
             if(result.getPlayerAction() == Types.combatActionResult.Escaped){
