@@ -53,13 +53,13 @@ public class Combat {
                     currentEnemy.setStatus(new StatusController().getStatus(Types.effect.Freezing));
                     break;
                 case "Nature's Embrace":
-                    result.setPlayerLifeDifference(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
+                    Player.getInstance().setLife(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
                     if (Player.getInstance().getLife() > Player.getInstance().getMaxLife()) {
                         result.setPlayerLifeDifference(Player.getInstance().getMaxLife());
                     }
                     break;
                 case "Second Wind":
-                    result.setPlayerLifeDifference(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
+                    Player.getInstance().setLife(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
                     if (Player.getInstance().getLife() > Player.getInstance().getMaxLife()) {
                         result.setPlayerLifeDifference(Player.getInstance().getMaxLife());
                     }
@@ -72,7 +72,7 @@ public class Combat {
                     currentEnemy.setStatus(new StatusController().getStatus(Types.effect.Burning));
                     break;
                 case "Water's Embrace":
-                    result.setPlayerLifeDifference(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
+                    Player.getInstance().setLife(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
                     if (Player.getInstance().getLife() > Player.getInstance().getMaxLife()) {
                         result.setPlayerLifeDifference(Player.getInstance().getMaxLife());
                     }
@@ -92,7 +92,7 @@ public class Combat {
                     currentEnemy.setStatus(new StatusController().getStatus(Types.effect.Stunned));
                     break;
                 case "Dark Endurance":
-                    result.setPlayerLifeDifference(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
+                    Player.getInstance().setLife(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
                     if (Player.getInstance().getLife() > Player.getInstance().getMaxLife()) {
                         result.setPlayerLifeDifference(Player.getInstance().getMaxLife());
                     }
@@ -108,7 +108,7 @@ public class Combat {
                         result.setEnemyLifeDifference(result.getEnemyLifeDifference() - currentEnemy.getDefense() / 100 * result.getEnemyLifeDifference());
                     break;
                 case "Cure":
-                    result.setPlayerLifeDifference(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
+                    Player.getInstance().setLife(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
                     if (Player.getInstance().getLife() > Player.getInstance().getMaxLife()) {
                         result.setPlayerLifeDifference(Player.getInstance().getMaxLife());
                     }
@@ -198,7 +198,7 @@ public class Combat {
                     currentEnemy.setStatus(new StatusController().getStatus(Types.effect.Freezing));
                     break;
                 case "Genesis":
-                    result.setPlayerLifeDifference(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
+                    Player.getInstance().setLife(Player.getInstance().getLife() + (Player.getInstance().getIntelligence() + ((Player.getInstance().getFocus() != null ? Player.getInstance().getFocus().getIntelligence() : (float) 0)) * skill.getPotency()));
                     if (Player.getInstance().getLife() > Player.getInstance().getMaxLife()) {
                         result.setPlayerLifeDifference(Player.getInstance().getMaxLife());
                     }
@@ -234,10 +234,6 @@ public class Combat {
                     Player.getInstance().setMana(0);
                     break;
             }
-            //Calculates Damage
-            ///result.setEnemyLifeDifference(CurrentEnemy.getDefense() - (Player.getInstance().getAttack() + (Player.getInstance().getWeapon() != null ? Player.getInstance().getWeapon().getAttack() : (float) 0)));
-            ///if (result.getEnemyHadFirstHit() && result.getEnemyAction() == Types.combatActionResult.Defended)
-            ///    result.setEnemyLifeDifference(result.getEnemyLifeDifference() - CurrentEnemy.getDefense() / 100 * result.getEnemyLifeDifference());
             //Deals Damage to enemy
             if (result.getEnemyLifeDifference() <= 0)
                 currentEnemy.setLife(currentEnemy.getLife() + result.getEnemyLifeDifference());
@@ -359,11 +355,11 @@ public class Combat {
         if (!result.getEnemyHadFirstHit() && result.getPlayerAction() == Types.combatActionResult.Defended)
             result.setPlayerLifeDifference(result.getPlayerLifeDifference() - (Player.getInstance().getDefense() + (Player.getInstance().getArmor() != null ? Player.getInstance().getArmor().getDefence() : 0)) / 100 * result.getPlayerLifeDifference());
         //Deals Damage to enemy
-        if (result.getPlayerLifeDifference() <= 0)
-            Player.getInstance().setLife(Player.getInstance().getLife() + result.getPlayerLifeDifference());
+        if (result.getPlayerLifeDifference() >= 0)
+            Player.getInstance().setLife(Player.getInstance().getLife() - result.getPlayerLifeDifference());
         else {
             result.setPlayerLifeDifference(0);
-            Player.getInstance().setLife(Player.getInstance().getLife() + result.getPlayerLifeDifference());
+            Player.getInstance().setLife(Player.getInstance().getLife() - result.getPlayerLifeDifference());
         }
         result.setEnemyAction(Types.combatActionResult.Attacked);
         return result;
