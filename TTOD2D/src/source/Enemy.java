@@ -11,6 +11,19 @@ public class Enemy extends Character implements java.io.Serializable {
         type = Types.enemyType.Creature;
     }
 
+    public Enemy(String name, int life, int defense, int attack, int intelligence, int initiative, int money, Types.enemyType enemyType){
+        this();
+        setName(name);
+        setMaxLife(life);
+        setLife(getMaxLife());
+        setDefense(defense);
+        setAttack(attack);
+        setIntelligence(intelligence);
+        setInitiative(initiative);
+        setMoney(money);
+        setType(enemyType);
+    }
+
     public Types.enemyType getType() {
         return type;
     }
