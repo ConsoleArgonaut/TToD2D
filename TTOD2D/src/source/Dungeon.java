@@ -75,6 +75,7 @@ public class Dungeon implements java.io.Serializable{
                 currentFloor = new Floor(new EnemyController().getEnemies(type), new EnemyController().getFloorBoss(type, i + 1));
             else
                 currentFloor = new Floor(new EnemyController().getEnemies(type), new EnemyController().getDungeonBoss(type));
+            floors.add(currentFloor);
         }
     }
 
@@ -83,7 +84,7 @@ public class Dungeon implements java.io.Serializable{
         boolean isSet = false;
         for (Floor x:floors) {
             if(!isSet)
-                if(x.getEnemiesDefeated() >= 6) {
+                if(x.getEnemiesDefeated() < 6) {
                     isSet = true;
                     floor = x;
                 }

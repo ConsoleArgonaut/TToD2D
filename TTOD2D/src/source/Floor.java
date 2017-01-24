@@ -35,7 +35,7 @@ public class Floor implements java.io.Serializable {
         if(enemiesDefeated == 5)
             nextEnemy = floorBoss.clone();
         else
-            nextEnemy = enemies.get(new Random().nextInt(enemies.size() - 1)).clone();
+            nextEnemy = enemies.get((int)(Math.random() * (enemies.size() - 1))).clone();
         enemiesDefeated++;
         return new Combat(nextEnemy);
     }
