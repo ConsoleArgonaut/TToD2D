@@ -12,11 +12,12 @@ public class SkillController {
         skills = new ArrayList<>();
     }
 
-    public void getSkill(int level){
+    public ArrayList<Skill> getSkill(int level){
         Skill skillToDefine = new Skill();
         Skill skillToDefine2 = new Skill();
         Skill skillToDefine3 = new Skill();
         Skill skillToDefine4 = new Skill();
+        level = Player.getInstance().getLevel();
         switch (level){
             case 1:
                 switch (Player.getInstance().getRace()) {
@@ -262,5 +263,13 @@ public class SkillController {
                 Player.getInstance().getSkills().add(skillToDefine);
                 break;
         }
+        return skills;
+    }
+
+    public ArrayList<Skill> getSkills() {
+        return skills;
+    }
+    public void setSkills(ArrayList<Skill> skills) {
+        this.skills = skills;
     }
 }
