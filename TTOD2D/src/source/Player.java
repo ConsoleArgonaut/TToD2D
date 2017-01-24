@@ -44,6 +44,7 @@ public class Player extends Character implements java.io.Serializable {
     }
     public void setRace(Types.playerRace race) {
         this.race = race;
+        Player.getInstance().setSkills(new SkillController().getSkill(Player.getInstance().getLevel()));
     }
     public float getNextLevel() {
         return nextLevel;

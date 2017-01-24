@@ -184,7 +184,7 @@ public class Combat {
                     Player.getInstance().setStatus(new StatusController().getStatus(Types.effect.Unrelenting));
                     break;
                 case "Reaper":
-                    float LifeDamageConversion = 0;
+                    float LifeDamageConversion;
                     LifeDamageConversion = ((Player.getInstance().getLife() / 100) * 20);
                     result.setEnemyLifeDifference(currentEnemy.getDefense() - ((Player.getInstance().getAttack() + (Player.getInstance().getWeapon() != null ? Player.getInstance().getWeapon().getAttack() : (float) 0) + LifeDamageConversion) * skill.getPotency()));
                     if (result.getEnemyHadFirstHit() && result.getEnemyAction() == Types.combatActionResult.Defended)

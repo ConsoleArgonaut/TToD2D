@@ -13,10 +13,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -27,8 +27,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -51,24 +51,24 @@ public class EnemyController {
                     enemyToDefine.setName("Party Pooper");
                     enemyToDefine.setMaxLife(100);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
                     enemyToDefine.setType(Types.enemyType.Party_Pooper);
                     enemies.add(enemyToDefine);
                     break;
-                }
+            }
         }
         if (type == Types.dungeonType.water){
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -80,8 +80,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -90,10 +90,10 @@ public class EnemyController {
                     break;
                 case Undead:
                     enemyToDefine.setName("Skeleton");
-                    enemyToDefine.setMaxLife(160);
+                    enemyToDefine.setMaxLife(1600);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(20);
-                    enemyToDefine.setAttack(20);
+                    enemyToDefine.setDefense(200);
+                    enemyToDefine.setAttack(200);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -114,10 +114,10 @@ public class EnemyController {
                     break;
                 case Pinguin:
                     enemyToDefine.setName("Pinguin");
-                    enemyToDefine.setMaxLife(250);
+                    enemyToDefine.setMaxLife(2500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(50);
-                    enemyToDefine.setAttack(50);
+                    enemyToDefine.setDefense(500);
+                    enemyToDefine.setAttack(500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -128,8 +128,8 @@ public class EnemyController {
                     enemyToDefine.setName("Party Pooper");
                     enemyToDefine.setMaxLife(100);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -142,10 +142,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -156,8 +156,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -178,10 +178,10 @@ public class EnemyController {
                     break;
                 case Pinguin:
                     enemyToDefine.setName("Pinguin");
-                    enemyToDefine.setMaxLife(250);
+                    enemyToDefine.setMaxLife(2500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(50);
-                    enemyToDefine.setAttack(50);
+                    enemyToDefine.setDefense(500);
+                    enemyToDefine.setAttack(500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -190,10 +190,10 @@ public class EnemyController {
                     break;
                 case Party_Pooper:
                     enemyToDefine.setName("Party Pooper");
-                    enemyToDefine.setMaxLife(100);
+                    enemyToDefine.setMaxLife(1000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -206,10 +206,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -220,8 +220,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -242,10 +242,10 @@ public class EnemyController {
                     break;
                 case Treant:
                     enemyToDefine.setName("Treant");
-                    enemyToDefine.setMaxLife(180);
+                    enemyToDefine.setMaxLife(1800);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -254,10 +254,10 @@ public class EnemyController {
                     break;
                 case Dryad:
                     enemyToDefine.setName("Dryad");
-                    enemyToDefine.setMaxLife(190);
+                    enemyToDefine.setMaxLife(1900);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(15);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(150);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -268,8 +268,8 @@ public class EnemyController {
                     enemyToDefine.setName("Party Pooper");
                     enemyToDefine.setMaxLife(100);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -282,10 +282,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Light Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -294,10 +294,10 @@ public class EnemyController {
                     break;
                 case Humanoid:
                     enemyToDefine.setName("Bandit");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -306,10 +306,10 @@ public class EnemyController {
                     break;
                 case Goblinoid:
                     enemyToDefine.setName("Goblin");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -318,10 +318,10 @@ public class EnemyController {
                     break;
                 case Creature:
                     enemyToDefine.setName("Spider");
-                    enemyToDefine.setMaxLife(150);
+                    enemyToDefine.setMaxLife(1500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(25);
                     enemyToDefine.setMoney(100);
@@ -332,8 +332,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -342,10 +342,10 @@ public class EnemyController {
                     break;
                 case Undead:
                     enemyToDefine.setName("Skeleton");
-                    enemyToDefine.setMaxLife(160);
+                    enemyToDefine.setMaxLife(1600);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(20);
-                    enemyToDefine.setAttack(20);
+                    enemyToDefine.setDefense(200);
+                    enemyToDefine.setAttack(200);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -366,10 +366,10 @@ public class EnemyController {
                     break;
                 case Pinguin:
                     enemyToDefine.setName("Pinguin");
-                    enemyToDefine.setMaxLife(250);
+                    enemyToDefine.setMaxLife(2500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(50);
-                    enemyToDefine.setAttack(50);
+                    enemyToDefine.setDefense(500);
+                    enemyToDefine.setAttack(500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -378,10 +378,10 @@ public class EnemyController {
                     break;
                 case Treant:
                     enemyToDefine.setName("Treant");
-                    enemyToDefine.setMaxLife(180);
+                    enemyToDefine.setMaxLife(1800);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -390,10 +390,10 @@ public class EnemyController {
                     break;
                 case Dryad:
                     enemyToDefine.setName("Dryad");
-                    enemyToDefine.setMaxLife(190);
+                    enemyToDefine.setMaxLife(1900);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(15);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(150);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -402,10 +402,10 @@ public class EnemyController {
                     break;
                 case Party_Pooper:
                     enemyToDefine.setName("Party Pooper");
-                    enemyToDefine.setMaxLife(100);
+                    enemyToDefine.setMaxLife(1000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -418,10 +418,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -430,10 +430,10 @@ public class EnemyController {
                     break;
                 case Goblinoid:
                     enemyToDefine.setName("Goblin");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -442,10 +442,10 @@ public class EnemyController {
                     break;
                 case Creature:
                     enemyToDefine.setName("Spider");
-                    enemyToDefine.setMaxLife(150);
+                    enemyToDefine.setMaxLife(1500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(25);
                     enemyToDefine.setMoney(100);
@@ -456,8 +456,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -478,10 +478,10 @@ public class EnemyController {
                     break;
                 case Party_Pooper:
                     enemyToDefine.setName("Party Pooper");
-                    enemyToDefine.setMaxLife(100);
+                    enemyToDefine.setMaxLife(1000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -494,10 +494,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -506,10 +506,10 @@ public class EnemyController {
                     break;
                 case Humanoid:
                     enemyToDefine.setName("Bandit");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -518,10 +518,10 @@ public class EnemyController {
                     break;
                 case Goblinoid:
                     enemyToDefine.setName("Goblin");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -530,10 +530,10 @@ public class EnemyController {
                     break;
                 case Creature:
                     enemyToDefine.setName("Spider");
-                    enemyToDefine.setMaxLife(150);
+                    enemyToDefine.setMaxLife(1500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(25);
                     enemyToDefine.setMoney(100);
@@ -544,8 +544,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -554,10 +554,10 @@ public class EnemyController {
                     break;
                 case Undead:
                     enemyToDefine.setName("Skeleton");
-                    enemyToDefine.setMaxLife(160);
+                    enemyToDefine.setMaxLife(1600);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(20);
-                    enemyToDefine.setAttack(20);
+                    enemyToDefine.setDefense(200);
+                    enemyToDefine.setAttack(200);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -578,10 +578,10 @@ public class EnemyController {
                     break;
                 case Pinguin:
                     enemyToDefine.setName("Pinguin");
-                    enemyToDefine.setMaxLife(250);
+                    enemyToDefine.setMaxLife(2500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(50);
-                    enemyToDefine.setAttack(50);
+                    enemyToDefine.setDefense(500);
+                    enemyToDefine.setAttack(500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -590,10 +590,10 @@ public class EnemyController {
                     break;
                 case Treant:
                     enemyToDefine.setName("Treant");
-                    enemyToDefine.setMaxLife(180);
+                    enemyToDefine.setMaxLife(1800);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -602,10 +602,10 @@ public class EnemyController {
                     break;
                 case Dryad:
                     enemyToDefine.setName("Dryad");
-                    enemyToDefine.setMaxLife(190);
+                    enemyToDefine.setMaxLife(1900);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(15);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(150);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -614,10 +614,10 @@ public class EnemyController {
                     break;
                 case Party_Pooper:
                     enemyToDefine.setName("Party Pooper");
-                    enemyToDefine.setMaxLife(100);
+                    enemyToDefine.setMaxLife(1000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -630,10 +630,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -642,10 +642,10 @@ public class EnemyController {
                     break;
                 case Goblinoid:
                     enemyToDefine.setName("Goblin");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -654,10 +654,10 @@ public class EnemyController {
                     break;
                 case Creature:
                     enemyToDefine.setName("Spider");
-                    enemyToDefine.setMaxLife(150);
+                    enemyToDefine.setMaxLife(1500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(25);
                     enemyToDefine.setMoney(100);
@@ -668,8 +668,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -678,10 +678,10 @@ public class EnemyController {
                     break;
                 case Undead:
                     enemyToDefine.setName("Skeleton");
-                    enemyToDefine.setMaxLife(160);
+                    enemyToDefine.setMaxLife(1600);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(20);
-                    enemyToDefine.setAttack(20);
+                    enemyToDefine.setDefense(200);
+                    enemyToDefine.setAttack(200);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -702,10 +702,10 @@ public class EnemyController {
                     break;
                 case Treant:
                     enemyToDefine.setName("Treant");
-                    enemyToDefine.setMaxLife(180);
+                    enemyToDefine.setMaxLife(1800);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -714,10 +714,10 @@ public class EnemyController {
                     break;
                 case Dryad:
                     enemyToDefine.setName("Dryad");
-                    enemyToDefine.setMaxLife(190);
+                    enemyToDefine.setMaxLife(1900);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(15);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(150);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -726,10 +726,10 @@ public class EnemyController {
                     break;
                 case Party_Pooper:
                     enemyToDefine.setName("Party Pooper");
-                    enemyToDefine.setMaxLife(100);
+                    enemyToDefine.setMaxLife(1000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -742,10 +742,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -754,10 +754,10 @@ public class EnemyController {
                     break;
                 case Creature:
                     enemyToDefine.setName("Spider");
-                    enemyToDefine.setMaxLife(150);
+                    enemyToDefine.setMaxLife(1500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(25);
                     enemyToDefine.setMoney(100);
@@ -766,10 +766,10 @@ public class EnemyController {
                     break;
                 case Undead:
                     enemyToDefine.setName("Skeleton");
-                    enemyToDefine.setMaxLife(160);
+                    enemyToDefine.setMaxLife(1600);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(20);
-                    enemyToDefine.setAttack(20);
+                    enemyToDefine.setDefense(200);
+                    enemyToDefine.setAttack(200);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -778,10 +778,10 @@ public class EnemyController {
                     break;
                 case Pinguin:
                     enemyToDefine.setName("Pinguin");
-                    enemyToDefine.setMaxLife(250);
+                    enemyToDefine.setMaxLife(2500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(50);
-                    enemyToDefine.setAttack(50);
+                    enemyToDefine.setDefense(500);
+                    enemyToDefine.setAttack(500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -794,10 +794,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -806,10 +806,10 @@ public class EnemyController {
                     break;
                 case Humanoid:
                     enemyToDefine.setName("Bandit");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -818,10 +818,10 @@ public class EnemyController {
                     break;
                 case Goblinoid:
                     enemyToDefine.setName("Goblin");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -830,10 +830,10 @@ public class EnemyController {
                     break;
                 case Creature:
                     enemyToDefine.setName("Spider");
-                    enemyToDefine.setMaxLife(150);
+                    enemyToDefine.setMaxLife(1500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(25);
                     enemyToDefine.setMoney(100);
@@ -844,8 +844,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -854,7 +854,7 @@ public class EnemyController {
                     break;
                 case Steve:
                     enemyToDefine.setName("Steve");
-                    enemyToDefine.setMaxLife(100);
+                    enemyToDefine.setMaxLife(1000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
                     enemyToDefine.setDefense(1);
                     enemyToDefine.setAttack(1);
@@ -866,10 +866,10 @@ public class EnemyController {
                     break;
                 case Pinguin:
                     enemyToDefine.setName("Pinguin");
-                    enemyToDefine.setMaxLife(250);
+                    enemyToDefine.setMaxLife(2500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(50);
-                    enemyToDefine.setAttack(50);
+                    enemyToDefine.setDefense(500);
+                    enemyToDefine.setAttack(500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -878,10 +878,10 @@ public class EnemyController {
                     break;
                 case Treant:
                     enemyToDefine.setName("Treant");
-                    enemyToDefine.setMaxLife(180);
+                    enemyToDefine.setMaxLife(1800);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -890,10 +890,10 @@ public class EnemyController {
                     break;
                 case Dryad:
                     enemyToDefine.setName("Dryad");
-                    enemyToDefine.setMaxLife(190);
+                    enemyToDefine.setMaxLife(1900);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(15);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(150);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -902,10 +902,10 @@ public class EnemyController {
                     break;
                 case Party_Pooper:
                     enemyToDefine.setName("Party Pooper");
-                    enemyToDefine.setMaxLife(100);
+                    enemyToDefine.setMaxLife(1000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -918,10 +918,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -930,10 +930,10 @@ public class EnemyController {
                     break;
                 case Humanoid:
                     enemyToDefine.setName("Bandit");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -942,10 +942,10 @@ public class EnemyController {
                     break;
                 case Goblinoid:
                     enemyToDefine.setName("Hoboblin");
-                    enemyToDefine.setMaxLife(175);
+                    enemyToDefine.setMaxLife(1750);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -954,10 +954,10 @@ public class EnemyController {
                     break;
                 case Creature:
                     enemyToDefine.setName("Spider");
-                    enemyToDefine.setMaxLife(150);
+                    enemyToDefine.setMaxLife(1500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(25);
                     enemyToDefine.setMoney(100);
@@ -968,8 +968,8 @@ public class EnemyController {
                     enemyToDefine.setName("Shepard");
                     enemyToDefine.setMaxLife(1);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(150);
-                    enemyToDefine.setAttack(150);
+                    enemyToDefine.setDefense(1500);
+                    enemyToDefine.setAttack(1500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -978,10 +978,10 @@ public class EnemyController {
                     break;
                 case Undead:
                     enemyToDefine.setName("Skeleton");
-                    enemyToDefine.setMaxLife(160);
+                    enemyToDefine.setMaxLife(1600);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(20);
-                    enemyToDefine.setAttack(20);
+                    enemyToDefine.setDefense(200);
+                    enemyToDefine.setAttack(200);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -1002,10 +1002,10 @@ public class EnemyController {
                     break;
                 case Pinguin:
                     enemyToDefine.setName("Pinguin");
-                    enemyToDefine.setMaxLife(250);
+                    enemyToDefine.setMaxLife(2500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(50);
-                    enemyToDefine.setAttack(50);
+                    enemyToDefine.setDefense(500);
+                    enemyToDefine.setAttack(500);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -1014,10 +1014,10 @@ public class EnemyController {
                     break;
                 case Treant:
                     enemyToDefine.setName("Treant");
-                    enemyToDefine.setMaxLife(180);
+                    enemyToDefine.setMaxLife(1800);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -1026,10 +1026,10 @@ public class EnemyController {
                     break;
                 case Dryad:
                     enemyToDefine.setName("Dryad");
-                    enemyToDefine.setMaxLife(190);
+                    enemyToDefine.setMaxLife(1900);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(15);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(150);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -1038,10 +1038,10 @@ public class EnemyController {
                     break;
                 case Party_Pooper:
                     enemyToDefine.setName("Party Pooper");
-                    enemyToDefine.setMaxLife(100);
+                    enemyToDefine.setMaxLife(1000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -1054,10 +1054,10 @@ public class EnemyController {
             switch (new Enemy().getType()){
                 case Dragon:
                     enemyToDefine.setName("Iron Lizard");
-                    enemyToDefine.setMaxLife(200);
+                    enemyToDefine.setMaxLife(2000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(25);
-                    enemyToDefine.setAttack(35);
+                    enemyToDefine.setDefense(250);
+                    enemyToDefine.setAttack(350);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(10);
                     enemyToDefine.setMoney(100);
@@ -1066,10 +1066,10 @@ public class EnemyController {
                     break;
                 case Creature:
                     enemyToDefine.setName("Iron Spider");
-                    enemyToDefine.setMaxLife(150);
+                    enemyToDefine.setMaxLife(1500);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(30);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(300);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(25);
                     enemyToDefine.setMoney(100);
@@ -1078,10 +1078,10 @@ public class EnemyController {
                     break;
                 case Undead:
                     enemyToDefine.setName("Skeleton");
-                    enemyToDefine.setMaxLife(160);
+                    enemyToDefine.setMaxLife(1600);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(20);
-                    enemyToDefine.setAttack(20);
+                    enemyToDefine.setDefense(200);
+                    enemyToDefine.setAttack(200);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(15);
                     enemyToDefine.setMoney(100);
@@ -1110,10 +1110,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Firelizards");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1121,10 +1121,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Firelizards");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1132,10 +1132,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Firelizards");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1143,10 +1143,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Firelizards");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1154,10 +1154,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Firelizards");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1169,10 +1169,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Waterserpent");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1180,10 +1180,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Waterserpent");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1191,10 +1191,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Waterserpent");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1202,10 +1202,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Waterserpent");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1213,10 +1213,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Waterserpent");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1228,10 +1228,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Mudgolem");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1239,10 +1239,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Mudgolem");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1250,10 +1250,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Mudgolem");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1261,10 +1261,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Mudgolem");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1272,10 +1272,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Mudgolem");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1287,10 +1287,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Gustfiend");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1298,10 +1298,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Gustfiend");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1309,10 +1309,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Gustfiend");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1320,10 +1320,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Gustfiend");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1331,10 +1331,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Gustfiend");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1346,10 +1346,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Icewurm");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1357,10 +1357,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Icewurm");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1368,10 +1368,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Icewurm");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1379,10 +1379,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Icewurm");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1390,10 +1390,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Icewurm");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1405,10 +1405,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("General of Light");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1416,10 +1416,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("General of Light");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1427,10 +1427,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("General of Light");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1438,10 +1438,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("General of Light");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1449,10 +1449,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("General of Light");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1464,10 +1464,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("General of Darkness");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1475,10 +1475,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("General of Darkness");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1486,10 +1486,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("General of Darkness");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1497,10 +1497,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("General of Darkness");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1508,10 +1508,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("General of Darkness");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1523,10 +1523,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Roppers");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1534,10 +1534,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Roppers");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1545,10 +1545,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Roppers");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1556,10 +1556,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Roppers");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1567,10 +1567,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Roppers");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1582,10 +1582,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Lightningbird");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1593,10 +1593,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Lightningbird");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1604,10 +1604,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Lightningbird");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1615,10 +1615,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Lightningbird");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1626,10 +1626,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Lightningbird");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1641,10 +1641,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Banditlord");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1652,10 +1652,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Banditlord");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1663,10 +1663,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Banditlord");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1674,10 +1674,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Banditlord");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1685,10 +1685,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Banditlord");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1700,10 +1700,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Nature Guardian");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1711,10 +1711,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Nature Guardian");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1722,10 +1722,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Nature Guardian");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1733,10 +1733,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Nature Guardian");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1744,10 +1744,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Nature Guardian");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1759,10 +1759,10 @@ public class EnemyController {
             switch (currentFloor){
                 case 1:
                     enemyToDefine.setName("Iron Protectors");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1770,10 +1770,10 @@ public class EnemyController {
                     break;
                 case 2:
                     enemyToDefine.setName("Iron Protectors");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1781,10 +1781,10 @@ public class EnemyController {
                     break;
                 case 3:
                     enemyToDefine.setName("Iron Protectors");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1792,10 +1792,10 @@ public class EnemyController {
                     break;
                 case 4:
                     enemyToDefine.setName("Iron Protectors");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
@@ -1803,10 +1803,10 @@ public class EnemyController {
                     break;
                 case 5:
                     enemyToDefine.setName("Iron Protectors");
-                    enemyToDefine.setMaxLife(500);
+                    enemyToDefine.setMaxLife(5000);
                     enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                    enemyToDefine.setDefense(30);
-                    enemyToDefine.setAttack(40);
+                    enemyToDefine.setDefense(300);
+                    enemyToDefine.setAttack(400);
                     enemyToDefine.setIntelligence(10);
                     enemyToDefine.setInitiative(20);
                     enemyToDefine.setMoney(500);
