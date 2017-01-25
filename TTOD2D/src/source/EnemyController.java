@@ -3,8 +3,11 @@ package source;
 import java.util.ArrayList;
 
 /**
- * Created by Drake on 16.12.2016.
+ * @author Drake
+ * @version 1.0
+ * @since 1.0    16.12.2016
  */
+
 public class EnemyController {
     private Enemy enemyToDefine = new Enemy();
     public ArrayList<Enemy> getEnemies(Types.dungeonType type){

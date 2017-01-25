@@ -3,8 +3,11 @@ package source;
 import java.io.*;
 
 /**
- * Created by pstieger on 16.12.2016.
+ * @author pstieger
+ * @version 1.0
+ * @since 1.0    16.12.2016
  */
+
 public class FileHandler {
     private static final String WORLD_FILE = "world.ser";
     private static final String PLAYER_FILE = "player.ser";

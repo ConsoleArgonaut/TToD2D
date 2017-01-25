@@ -1,8 +1,11 @@
 package source;
 
 /**
- * Created by Michael on 16.12.2016.
+ * @author Michael
+ * @version 1.0
+ * @since 1.0    16.12.2016
  */
+
 public class Types {
     public enum dungeonType{
         fire, water, earth, wind, ice, light, darkness, poison, lightning, unaspected, nature, metal, death

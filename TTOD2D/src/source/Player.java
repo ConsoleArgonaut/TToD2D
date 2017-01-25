@@ -1,10 +1,11 @@
 package source;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 /**
- * Created by Michael on 16.12.2016.
+ * @author Michael
+ * @version 1.0
+ * @since 1.0    16.12.2016
  */
+
 public class Player extends Character implements java.io.Serializable {
     private static Player ourInstance = new Player();
 

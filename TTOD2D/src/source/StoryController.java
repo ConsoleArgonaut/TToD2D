@@ -3,8 +3,11 @@ package source;
 import java.util.ArrayList;
 
 /**
- * Created by Michael on 13.01.2017.
+ * @author Michael
+ * @version 1.0
+ * @since 1.0    13.01.2017
  */
+
 public class StoryController {
     public static ArrayList<String> getIntro(){
         ArrayList<String> intro = new ArrayList<>();

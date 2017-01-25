@@ -1,8 +1,11 @@
 package source;
 
 /**
- * Created by Drake on 21.01.2017.
+ * @author Drake
+ * @version 1.0
+ * @since 1.0    21.01.2017
  */
+
 public class StatusController {
     public Status getStatus(Types.effect type){
 

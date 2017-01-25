@@ -1,8 +1,11 @@
 package source;
 
 /**
- * Created by Drake on 16.12.2016.
+ * @author Drake
+ * @version 1.0
+ * @since 1.0    16.12.2016
  */
+
 public class Weapon extends Item {
     private float attack = 0;
     private float critChance = 0;

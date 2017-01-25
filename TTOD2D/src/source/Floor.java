@@ -1,11 +1,13 @@
 package source;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 /**
- * Created by Michael on 16.12.2016.
+ * @author Michael
+ * @version 1.0
+ * @since 1.0    16.12.2016
  */
+
 public class Floor implements java.io.Serializable {
     private ArrayList<Enemy> enemies;
     private int enemiesDefeated = 0;

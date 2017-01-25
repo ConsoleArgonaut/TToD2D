@@ -1,11 +1,13 @@
 package source;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * Created by Drake on 16.12.2016.
+ * @author Drake
+ * @version 1.0
+ * @since 1.0    16.12.2016
  */
+
 public class Combat {
 
     private Enemy currentEnemy;

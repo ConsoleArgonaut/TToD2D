@@ -1,8 +1,11 @@
 package source;
 
 /**
- * Created by Drake on 16.12.2016.
+ * @author Drake
+ * @version 1.0
+ * @since 1.0    16.12.2016
  */
+
 public class Armor extends Item {
     private float defence = 0;
 

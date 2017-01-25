@@ -1,8 +1,11 @@
 package source;
 
 /**
- * Created by Michael on 22.01.2017.
+ * @author Michael
+ * @version 1.0
+ * @since 1.0    22.01.2017
  */
+
 public class ItemController {
     public static Weapon getWeaponById(int weaponNumber){
         Weapon returnValue = new Weapon();

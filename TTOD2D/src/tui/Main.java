@@ -2,16 +2,16 @@ package tui;
 
 import source.*;
 
-import java.lang.Character;
-import java.lang.management.PlatformLoggingMXBean;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static source.Types.combatActionResult.Attacked;
 
 /**
- * Created by Michael on 17.01.2017.
+ * @author Michael
+ * @version 1.0
+ * @since 1.0    17.01.2017
  */
+
 public class Main {
     private static World world;
     public static void main(String[] args) {
