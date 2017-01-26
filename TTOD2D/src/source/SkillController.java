@@ -80,7 +80,7 @@ public class SkillController {
                 skillToDefine3.setManaCost(0);
                 skillToDefine3.setPotency(1);
                 skillToDefine3.setUnlockedAt(1);
-                Player.getInstance().getSkills().add(skillToDefine);
+                Player.getInstance().getSkills().add(skillToDefine3);
 
                 skillToDefine4.setName("Defence");
                 skillToDefine4.setManaCost(0);

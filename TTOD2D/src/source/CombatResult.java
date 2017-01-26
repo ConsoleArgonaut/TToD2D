@@ -25,8 +25,8 @@ public class CombatResult {
         enemyHadFirstHit = false;
         playerItemUsed = null;
         enemyItemUsed = null;
-        enemyAction = null;
-        playerAction = null;
+        enemyAction = Types.combatActionResult.Waited;
+        playerAction = Types.combatActionResult.Waited;
         playerLifeDifference = 0;
         enemyLifeDifference = 0;
     }
