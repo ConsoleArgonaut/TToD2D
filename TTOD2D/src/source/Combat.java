@@ -24,7 +24,9 @@ public class Combat {
     }
 
     /**
-     * Attack Enemy
+     * This method calculates damage the player deals or the healing the player receives
+     * @param skill Skill is the parameter which is executed.
+     * @return This method returns endRound(result) which contains the result of the calculation.
      */
     public CombatResult attack(Skill skill) {
         CombatResult result = new CombatResult();
@@ -274,7 +276,9 @@ public class Combat {
     }
 
     /**
-     * Use Potion to heal yourself
+     * This method calculates how a potion effects the Player if he owns a any potion
+     * @param item Item is the parameter which is used.
+     * @return This method returns endRound(result) which contains the result of the calculation.
      */
     public CombatResult usePotion(Potion item) {
         CombatResult result = new CombatResult();
@@ -288,7 +292,9 @@ public class Combat {
     }
 
     /**
-     * Use Poison to causes harm to the Enemy
+     * This method calculates how a poison effects the current enemy if the Player owns a any poison.
+     * @param item Item is the parameter which is used.
+     * @return This method returns endRound(result) which contains the result of the calculation.
      */
     public CombatResult usePoison(Poison item) {
         CombatResult result = new CombatResult();
@@ -302,7 +308,8 @@ public class Combat {
     }
 
     /**
-     * Escape from Combat
+     * This method determines how the Player acts if the command to "flee" is given.
+     * @return This method returns endRound(result) which contains the result of the calculation.
      */
     public CombatResult flee() {
         CombatResult result = new CombatResult();
@@ -316,7 +323,8 @@ public class Combat {
     }
 
     /**
-     * Wait a round and let Enemy perform a move
+     * This method determines how the Player acts if the command to "wait" is given.
+     * @return This method returns endRound(result) which contains the result of the calculation.
      */
     public CombatResult getAttacked() {
         CombatResult result = new CombatResult();
@@ -325,8 +333,8 @@ public class Combat {
     }
 
     /**
-     * Calculates the first to attack
-     * returns true if enemy has first hit
+     * This method determines if the Player or the enemy is first to act in combat.
+     * @return Returns true if the enemy is first and returns false if the Player is first to act.
      */
     private boolean enemyHasFirstHit() {
         int playerChance = 0;
@@ -340,6 +348,11 @@ public class Combat {
             return true;
     }
 
+    /**
+     * This method determines the next action of the enemy.
+     * @param result CombatResult passes the enemy's chosen action.
+     * @return Returns the result of the enemy's chosen action.
+     */
     private CombatResult enemyMove(CombatResult result) {
         //Calculates Enemy Move
         if (currentEnemy.getLife() > 0) {
@@ -370,6 +383,11 @@ public class Combat {
         return result;
     }
 
+    /**
+     * This method calculates the damage the enemy deals to the Player if the chosen action the enemy made is attack.
+     * @param result CombatResult passes the enemy's chosen action.
+     * @return Returns the result of the enemy's chosen action.
+     */
     private CombatResult enemyAttacks(CombatResult result) {
         result.setEnemyAction(Types.combatActionResult.Attacked);
 
@@ -389,38 +407,46 @@ public class Combat {
         return result;
     }
 
+    /**
+     * This method calculates the damage the enemy takes from abnormal status effects he currently has and if the enemy is dead the Player receives all items held by the enemy and gains experience.
+     * @param result CombatResult passes the enemy's and the Players chosen action.
+     * @return Returns the result of the enemy's and the Players chosen action.
+     */
     private CombatResult endRound(CombatResult result) {
         if (currentEnemy.getLife() > 0) {
             if (currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Poisoned) || currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Burning) || currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Freezing)) {
-                if (currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Poisoned)) ;
-                {
+                if (currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Poisoned)){
                     currentEnemy.setLife(currentEnemy.getLife() - (new StatusController().getStatus(Types.effect.Poisoned).getPotency()));
                 }
-                if (currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Burning)) ;
-                {
+                if (currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Burning)){
                     currentEnemy.setLife(currentEnemy.getLife() - (new StatusController().getStatus(Types.effect.Burning).getPotency()));
                 }
-                if (currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Freezing)) ;
-                {
+                if (currentEnemy.getStatus() == new StatusController().getStatus(Types.effect.Freezing)){
                     currentEnemy.setLife(currentEnemy.getLife() - (new StatusController().getStatus(Types.effect.Freezing).getPotency()));
                 }
-                if (currentEnemy.getLife() > 0) {
-                    if (currentEnemy.getItems().size() > 0)
-                        for (Item item : currentEnemy.getItems()) {
-                            Player.getInstance().getItems().add(item);
-                        }
-                    Player.getInstance().setMoney(Player.getInstance().getMoney() + currentEnemy.getMoney());
-                    Player.getInstance().addExperience(1);
-                }
+            }
+            if (currentEnemy.getLife() > 0) {
+                if (currentEnemy.getItems().size() > 0)
+                    for (Item item : currentEnemy.getItems()) {
+                        Player.getInstance().getItems().add(item);
+                    }
+                Player.getInstance().setMoney(Player.getInstance().getMoney() + currentEnemy.getMoney());
+                Player.getInstance().addExperience(1);
             }
         }
         return result;
     }
-    
+
+    /**
+     * @return Returns currentEnemy when called.
+     */
     public Enemy getCurrentEnemy(){
         return currentEnemy;
     }
 
+    /**
+     * @param enemy Enemy passes the current enemy.
+     */
     public void setCurrentEnemy(Enemy enemy){
         currentEnemy = enemy;
     }
