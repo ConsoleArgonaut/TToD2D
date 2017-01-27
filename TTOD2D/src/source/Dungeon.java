@@ -8,20 +8,36 @@ import java.util.ArrayList;
  * @since 1.0    27.12.2016
  */
 public class Dungeon implements java.io.Serializable{
+    /**
+     * The floors of the dungeon
+     */
     private ArrayList<Floor> floors;
 
+    /**
+     * The count of floors in the dungeon
+     */
     private int floorCount;
 
-    public void setName(String name) {
-        Dungeon.name = name;
-    }
-
+    /**
+     * The name of the dungeon.
+     * Gets replaced by standard dungeon name, if empty
+     */
     private static String name;
 
+    /**
+     * The type of the dungeon defined at:
+     * @see Types.dungeonType
+     */
     private Types.dungeonType type;
 
+    /**
+     * Is true if dungeon is cleared / All enemies are defeated
+     */
     private boolean isCleared;
 
+    /**
+     * This constructor is used to initialize the above defined variables in their default state.
+     */
     public Dungeon(){
         floors = new ArrayList<>();
         floorCount = 0;
@@ -30,11 +46,73 @@ public class Dungeon implements java.io.Serializable{
         name = "";
     }
 
+    /**
+     * This constructor is used to initialize the above defined variables in their default state.
+     * And also set the type and floorcount of the dungeon
+     * @param dungeonFloorCount
+     * @param dungeonType 
+     */
     public Dungeon(Types.dungeonType dungeonType, int dungeonFloorCount){
         this();
         type = dungeonType;
         floorCount = dungeonFloorCount;
         generateFloors();
+    }
+
+    /**
+     * This method gets the name of the current dungeon or returns standard dungeonname for dungeontype
+     * @return The name of the current dungeon.
+     */
+    public String getName() {
+        String returnValue = name;
+        if(returnValue == "")
+            switch (this.type){
+                case darkness:
+                    returnValue = "Dark dungeon of doom";
+                    break;
+                case earth:
+                    returnValue = "Dungeon of earth";
+                    break;
+                case fire:
+                    returnValue = "Lava temple";
+                    break;
+                case ice:
+                    returnValue = "Snow palace";
+                    break;
+                case light:
+                    returnValue = "Bright place?";
+                    break;
+                case lightning:
+                    returnValue = "Cloud paradise";
+                    break;
+                case metal:
+                    returnValue = "Metal concert";
+                    break;
+                case poison:
+                    returnValue = "Witch village";
+                    break;
+                case nature:
+                    returnValue = "Sunny hill of the evil creatures";
+                    break;
+                case unaspected:
+                    returnValue = "Plain dungeon";
+                    break;
+                case wind:
+                    returnValue = "Dungeon of the blowing wind";
+                    break;
+                case water:
+                    returnValue = "Boat of aqua";
+                    break;
+            }
+        return returnValue;
+    }
+
+    /**
+     * Sets the name of the dungeon
+     * @param name The name to set
+     */
+    public void setName(String name) {
+        Dungeon.name = name;
     }
 
     /**
@@ -126,53 +204,5 @@ public class Dungeon implements java.io.Serializable{
                 }
         }
         return floor;
-    }
-
-    /**
-     * This method gets the name of the current dungeon or returns standard dungeonname for dungeontype
-     * @return The name of the current dungeon.
-     */
-    public String getName() {
-        String returnValue = name;
-        if(returnValue == "")
-            switch (this.type){
-                case darkness:
-                    returnValue = "Dark dungeon of doom";
-                    break;
-                case earth:
-                    returnValue = "Dungeon of earth";
-                    break;
-                case fire:
-                    returnValue = "Lava temple";
-                    break;
-                case ice:
-                    returnValue = "Snow palace";
-                    break;
-                case light:
-                    returnValue = "Bright place?";
-                    break;
-                case lightning:
-                    returnValue = "Cloud paradise";
-                    break;
-                case metal:
-                    returnValue = "Metal concert";
-                    break;
-                case poison:
-                    returnValue = "Witch village";
-                    break;
-                case nature:
-                    returnValue = "Sunny hill of the evil creatures";
-                    break;
-                case unaspected:
-                    returnValue = "Plain dungeon";
-                    break;
-                case wind:
-                    returnValue = "Dungeon of the blowing wind";
-                    break;
-                case water:
-                    returnValue = "Boat of aqua";
-                    break;
-            }
-        return returnValue;
     }
 }
