@@ -7,8 +7,20 @@ package source;
  */
 
 public class Status {
+
+    /**
+     * This method is used to save the name of a status.
+     */
     private String name = "";
+
+    /**
+     * This method is used to save the potency of a status.
+     */
     private float potency = 0;
+
+    /**
+     * This method is used to save the duration of a status.
+     */
     private int duration = 0;
 
     public String getName() {

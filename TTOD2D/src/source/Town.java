@@ -9,8 +9,20 @@ import java.util.ArrayList;
  */
 
 public class Town implements java.io.Serializable {
+
+    /**
+     * This variable is used to save an ArrayList containing inns.
+     */
     private ArrayList<Inn> inns;
+
+    /**
+     * This variable is used to save an ArrayList containing shops.
+     */
     private ArrayList<Shop> shops;
+
+    /**
+     * This variable is used to save a name.
+     */
     private String name;
 
     public Town(){
@@ -19,41 +31,24 @@ public class Town implements java.io.Serializable {
         name = "";
     }
 
-    public Town(String townName){
-        this();
-        name = townName;
-    }
-
-    public Town(String townName, ArrayList<Inn> innsToSet, ArrayList<Shop> shopsToSet){
-        name = townName;
-        inns = innsToSet;
-        shops = shopsToSet;
-    }
-
     public String getName(){
         return name;
     }
-
     public void setName(String nameToSet){
         name = nameToSet;
     }
-
     public ArrayList<Inn> getInns(){
         return inns;
     }
-
     public void setInns(ArrayList<Inn> innsToSet) {
         inns = innsToSet;
     }
-
     public ArrayList<Shop> getShops(){
         return shops;
     }
-
     public void setShops(ArrayList<Shop> shopsToSet) {
         shops = shopsToSet;
     }
-
     public ArrayList<Building> getBuildings(){
         ArrayList<Building> returnValue = new ArrayList<>();
         for (Building b:inns) {

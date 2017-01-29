@@ -7,8 +7,13 @@ package source;
  */
 
 public class StatusController {
-    public Status getStatus(Types.effect type){
 
+    /**
+     * This method is useed to define the various status effects that can be applied.
+     * @param type Type holds the type which is passed.
+     * @return Returns statusToDefine.
+     */
+    public Status getStatus(Types.effect type){
         Status statusToDefine = new Status();
         switch (type){
             case Good:
