@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 public class TraderTest {
     @org.junit.Test
     public void getSellItemPrice()  {
+        Player.getInstance().resetPlayer();
         Trader t = new Trader("Test");
         Item i = new Item();
         i.setValue(20);
@@ -20,6 +21,7 @@ public class TraderTest {
 
     @org.junit.Test
     public void getBuyItemPrice() {
+        Player.getInstance().resetPlayer();
         Trader t = new Trader("Test");
         Item i = new Item();
         i.setValue(20);
@@ -29,6 +31,7 @@ public class TraderTest {
 
     @org.junit.Test
     public void sellItem() {
+        Player.getInstance().resetPlayer();
         Trader t = new Trader("Test");
         Item i = new Item();
         i.setValue(20);
@@ -43,6 +46,7 @@ public class TraderTest {
 
     @org.junit.Test
     public void buyItem() {
+        Player.getInstance().resetPlayer();
         Trader t = new Trader("Test");
         Item i = new Item();
         i.setValue(20);
