@@ -1,4 +1,7 @@
+import org.junit.Assert;
 import org.junit.Test;
+import source.Player;
+import source.World;
 
 import static org.junit.Assert.*;
 
@@ -7,8 +10,13 @@ import static org.junit.Assert.*;
  */
 public class WorldTest {
     @Test
-    public void generateDefault() throws Exception {
-
+    public void generateDefault() {
+        Player.getInstance().resetPlayer();
+        World world = new World();
+        world.generateDefault();
+        Assert.assertTrue(world.getTowns().size() > 0);
+        Assert.assertTrue(world.getDungeons().size() > 0);
+        Assert.assertNotNull(Player.getInstance().getWeapon());
     }
 
 }
