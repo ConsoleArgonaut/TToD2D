@@ -1,4 +1,7 @@
+import org.junit.Assert;
 import org.junit.Test;
+import source.Inn;
+import source.Player;
 
 import static org.junit.Assert.*;
 
@@ -7,8 +10,11 @@ import static org.junit.Assert.*;
  */
 public class InnTest {
     @Test
-    public void takeADump() throws Exception {
-
+    public void takeADump() {
+        Player.getInstance().resetPlayer();
+        Inn inn = new Inn();
+        inn.takeADump();
+        Assert.assertTrue(Player.getInstance().getStatus() != null);
     }
 
 }
