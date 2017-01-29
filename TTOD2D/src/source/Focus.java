@@ -7,12 +7,15 @@ package source;
  */
 
 public class Focus extends Item {
+
+    /**
+     * This variable is used to assign the intelligence value to the item focus
+     */
     private float intelligence = 0;
 
     public float getIntelligence() {
         return intelligence;
     }
-
     public void setIntelligence(float intelligence) {
         this.intelligence = intelligence;
     }
