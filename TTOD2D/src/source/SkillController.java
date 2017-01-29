@@ -7,6 +7,11 @@ package source;
  */
 
 public class SkillController {
+
+    /**
+     * This method is used to define the skill the player can acquire.
+     * @param level This parameter is used for the skill switch.
+     */
     public static void getSkill(int level){
         Skill skillToDefine = new Skill();
         Skill skillToDefine2 = new Skill();

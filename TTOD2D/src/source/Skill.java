@@ -7,10 +7,30 @@ package source;
  */
 
 public class Skill {
+
+    /**
+     * This variable is used to save the name of a skill.
+     */
     private String name = "";
+
+    /**
+     * This variable is used to save the mana cost of a skill.
+     */
     private float manaCost = 0;
+
+    /**
+     * This variable is used to save the potency of a skill.
+     */
     private float potency = 0;
+
+    /**
+     * This variable is used to save the level at which the Player onlocks this skill.
+     */
     private int unlockedAt = 0;
+
+    /**
+     * This variable is used to save wether the skill is locked to a specific race.
+     */
     private Types.playerRace raceLocked = Types.playerRace.Unknown;
 
     public String getName() {
