@@ -85,4 +85,11 @@ public class Player extends Character implements java.io.Serializable {
             Player.getInstance().setNextLevel(Player.getInstance().getNextLevel() * 3);
         }
     }
+
+    /**
+     * Resets the current player
+     */
+    public void resetPlayer(){
+        ourInstance = new Player();
+    }
 }
