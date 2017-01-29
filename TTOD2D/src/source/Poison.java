@@ -7,12 +7,15 @@ package source;
  */
 
 public class Poison extends Item {
+
+    /**
+     * This variable is used to save the potency of a poison.
+     */
     private float potency = 0;
 
     public float getPotency() {
         return potency;
     }
-
     public void setPotency(float potency) {
         this.potency = potency;
     }

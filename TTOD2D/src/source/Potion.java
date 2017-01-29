@@ -7,6 +7,10 @@ package source;
  */
 
 public class Potion extends Item {
+
+    /**
+     * This variable is used do save the healing potency of a potion.
+     */
     private float healing;
 
     public  Potion(){
@@ -15,7 +19,6 @@ public class Potion extends Item {
     public float getHealing() {
         return healing;
     }
-
     public void setHealing(float healing) {
         this.healing = healing;
     }
