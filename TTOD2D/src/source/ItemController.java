@@ -7,6 +7,12 @@ package source;
  */
 
 public class ItemController {
+
+    /**
+     * This method is used to select weapons by their ID.
+     * @param weaponNumber Integer weaponNumber is used as ID for weapons
+     * @return Returns returnValue
+     */
     public static Weapon getWeaponById(int weaponNumber){
         Weapon returnValue = new Weapon();
         switch (weaponNumber){
@@ -107,6 +113,11 @@ public class ItemController {
         return returnValue;
     }
 
+    /**
+     * This method is used to select poison by their ID.
+     * @param poisonId Integer poisonId is used as ID for poison.
+     * @return Returns returnValue
+     */
     public static Poison getPoisonById(int poisonId){
         Poison returnValue = new Poison();
         returnValue.setMaxCount(10);
@@ -135,6 +146,11 @@ public class ItemController {
         return returnValue;
     }
 
+    /**
+     * This method is used to select poison by their ID.
+     * @param potionId Integer potionId is used as ID for potion.
+     * @return Returns returnValue
+     */
     public static Potion getPotionById(int potionId){
         Potion returnValue = new Potion();
         returnValue.setType(Types.itemType.Potion);
@@ -163,6 +179,11 @@ public class ItemController {
         return returnValue;
     }
 
+    /**
+     * This method is used to select shield by their ID.
+     * @param shieldId Integer shieldId is used as ID for shield.
+     * @return Returns returnValue
+     */
     public static Shield getShieldById(int shieldId){
         Shield returnValue = new Shield();
         returnValue.setType(Types.itemType.Shield);
@@ -194,6 +215,11 @@ public class ItemController {
         return returnValue;
     }
 
+    /**
+     * This method is used to select armor by their ID.
+     * @param armorId Integer armorId is used as ID for armor.
+     * @return Returns returnValue
+     */
     public static Armor getArmorById(int armorId){
         Armor returnValue = new Armor();
         returnValue.setType(Types.itemType.Armor);
@@ -222,6 +248,11 @@ public class ItemController {
         return returnValue;
     }
 
+    /**
+     * This method is used to select focus by their ID.
+     * @param focusId Integer focusId is used as ID for focus.
+     * @return Returns returnValue
+     */
     public static Focus getFocusById(int focusId){
         Focus returnValue = new Focus();
         returnValue.setType(Types.itemType.Focus);
@@ -251,6 +282,11 @@ public class ItemController {
         return returnValue;
     }
 
+    /**
+     * This method is used to select items by their ID.
+     * @param itemId Integer itemId is used as ID for items.
+     * @return Returns returnValue.
+     */
     public static Item getItemById(int itemId){
         Item returnValue = new Item();
         returnValue.setIsCombatItem(false);
