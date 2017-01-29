@@ -1,4 +1,8 @@
+import org.junit.Assert;
 import org.junit.Test;
+import source.Status;
+import source.StatusController;
+import source.Types;
 
 import static org.junit.Assert.*;
 
@@ -7,8 +11,10 @@ import static org.junit.Assert.*;
  */
 public class StatusControllerTest {
     @Test
-    public void getStatus() throws Exception {
-
+    public void getStatus() {
+        for (Types.effect e:Types.effect.values()) {
+            Assert.assertNotNull(new StatusController().getStatus(e));
+        }
     }
 
 }
