@@ -1,4 +1,6 @@
+import org.junit.Assert;
 import org.junit.Test;
+import source.ItemController;
 
 import static org.junit.Assert.*;
 
@@ -7,38 +9,37 @@ import static org.junit.Assert.*;
  */
 public class ItemControllerTest {
     @Test
-    public void getWeaponById() throws Exception {
-
+    public void getWeaponById() {
+        Assert.assertNotNull(ItemController.getWeaponById(0));
     }
 
     @Test
-    public void getPoisonById() throws Exception {
-
+    public void getPoisonById() {
+        Assert.assertNotNull(ItemController.getPoisonById(0));
     }
 
     @Test
-    public void getPotionById() throws Exception {
-
+    public void getPotionById() {
+        Assert.assertNotNull(ItemController.getPotionById(0));
     }
 
     @Test
-    public void getShieldById() throws Exception {
-
+    public void getShieldById() {
+        Assert.assertNotNull(ItemController.getShieldById(0));
     }
 
     @Test
-    public void getArmorById() throws Exception {
-
+    public void getArmorById() {
+        Assert.assertNotNull(ItemController.getArmorById(0));
     }
 
     @Test
-    public void getFocusById() throws Exception {
-
+    public void getFocusById() {
+        Assert.assertNotNull(ItemController.getFocusById(0));
     }
 
     @Test
-    public void getItemById() throws Exception {
-
+    public void getItemById() {
+        Assert.assertNotNull(ItemController.getItemById(0));
     }
-
 }
