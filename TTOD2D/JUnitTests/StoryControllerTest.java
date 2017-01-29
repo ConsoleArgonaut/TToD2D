@@ -1,4 +1,6 @@
+import org.junit.Assert;
 import org.junit.Test;
+import source.StoryController;
 
 import static org.junit.Assert.*;
 
@@ -7,13 +9,13 @@ import static org.junit.Assert.*;
  */
 public class StoryControllerTest {
     @Test
-    public void getIntro() throws Exception {
-
+    public void getIntro() {
+        Assert.assertTrue(StoryController.getIntro().size() > 0);
     }
 
     @Test
-    public void getCredits() throws Exception {
-
+    public void getCredits() {
+        Assert.assertTrue(StoryController.getCredits().size() > 0);
     }
 
 }
