@@ -9,7 +9,15 @@ import java.util.ArrayList;
  */
 
 public class Inn extends Building implements java.io.Serializable {
+
+    /**
+     * This variable is used to save all NPCs into an ArrayList.
+     */
     private ArrayList<NPC> npcs;
+
+    /**
+     * This variable is used to save innkeeper
+     */
     private Innkeeper innkeeper;
 
     public Inn(){
@@ -18,34 +26,23 @@ public class Inn extends Building implements java.io.Serializable {
         innkeeper = new Innkeeper("Unknown Innkeeper");
     }
 
-    public Inn(Innkeeper innkeeperToSet, ArrayList<NPC> npcsToSet){
-        super("Inn", Types.buildingType.Inn);
-        innkeeper = innkeeperToSet;
-        npcs = npcsToSet;
-    }
-
-    public Inn(Innkeeper innkeeperToSet, ArrayList<NPC> npcsToSet, String innName){
-        super(innName, Types.buildingType.Inn);
-        innkeeper = innkeeperToSet;
-        npcs = npcsToSet;
-    }
-
     public ArrayList<NPC> getNpcs(){
         return npcs;
     }
-
     public void setNpcs(ArrayList<NPC> npcsToSet){
         npcs = npcsToSet;
     }
-
     public Innkeeper getInnkeeper(){
         return innkeeper;
     }
-
     public void setInnkeeper(Innkeeper innkeeperToSet){
         innkeeper = innkeeperToSet;
     }
 
+    /**
+     * This method checks when the Player last visited the toilet.
+     * @return status
+     */
     public Status takeADump(){
         Status status = new Status();
         status.setDuration(5);

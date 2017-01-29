@@ -1,7 +1,5 @@
 package source;
 
-import java.util.ArrayList;
-
 /**
  * @author Michael
  * @version 1.0
@@ -10,30 +8,30 @@ import java.util.ArrayList;
 
 public class Innkeeper extends NPC {
 
+    /**
+     * This variable is used to calculate teh remaining money the Player holds after the cost-of-living deduction.
+     */
     private int roomPrice;
 
+    /**
+     * This method is used to initialise the name of the innkeeper.
+     * @param name Name of the innkeeper
+     */
     public Innkeeper(String name){
         super(name);
-    }
-
-    public Innkeeper(String name, int roomPriceToSet){
-        this(name);
-        roomPrice = roomPriceToSet;
-    }
-
-    public Innkeeper(String name, int roomPrice, ArrayList<String> sentences){
-        this(name, roomPrice);
-        setSentences(sentences);
     }
 
     public int getRoomPrice(){
         return roomPrice;
     }
-
     public void setRoomPrice(int roomPriceToSet){
         roomPrice = roomPriceToSet;
     }
 
+    /**
+     * This method checks if the Player has enough money to sleep at the inn and if that is the case the Player regains all his health and mana.
+     * @return true or false
+     */
     public boolean goSleeping(){
         if(Player.getInstance().getMoney() > roomPrice){
             Player.getInstance().setMoney(Player.getInstance().getMoney() - roomPrice);
