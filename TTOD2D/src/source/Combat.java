@@ -10,8 +10,17 @@ import java.util.Random;
 
 public class Combat {
 
+    /**
+     * This variable is used to pass the current enemy that is beeing fought in the damage calculation.
+     */
     private Enemy currentEnemy;
+    /**
+     * This variable is used to determine and save how long a status effect will persist.
+     */
     private int duration;
+    /**
+     * This variable is used to calculate the damage the skill "Reposte" can deal.
+     */
     private float reposte;
 
     public Combat() {
@@ -19,6 +28,10 @@ public class Combat {
         reposte = 0;
     }
 
+    /**
+     * This method is used to assign enemy to the parameter currentEnemy
+     * @param enemy Enemy is passed to currentEnemy
+     */
     public Combat(Enemy enemy) {
         currentEnemy = enemy;
     }
@@ -437,16 +450,9 @@ public class Combat {
         return result;
     }
 
-    /**
-     * @return Returns currentEnemy when called.
-     */
     public Enemy getCurrentEnemy(){
         return currentEnemy;
     }
-
-    /**
-     * @param enemy Enemy passes the current enemy.
-     */
     public void setCurrentEnemy(Enemy enemy){
         currentEnemy = enemy;
     }

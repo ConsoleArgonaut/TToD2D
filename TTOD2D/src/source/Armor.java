@@ -16,17 +16,9 @@ public class Armor extends Item {
      */
     private float defence = 0;
 
-    /**
-     * @return defence is returned when the method is called
-     */
     public float getDefence() {
         return defence;
     }
-
-    /**
-     * @param defence is used to assign and set the returned value as the defence value of
-     * @see Armor
-     */
     public void setDefence(float defence) {
         this.defence = defence;
     }

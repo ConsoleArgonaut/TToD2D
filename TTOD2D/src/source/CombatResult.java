@@ -71,73 +71,45 @@ public class CombatResult {
         enemyLifeDifference = 0;
     }
 
-    /**
-     * @return playerLifeDifference is returned when getPlayerLifeDifference() is called.
-     */
     public float getPlayerLifeDifference() {
         return playerLifeDifference;
     }
-
-    /**
-     * @param playerLifeDifference is used to save the value that was to setPlayerLifeDifference()
-     */
     public void setPlayerLifeDifference(float playerLifeDifference) {
         this.playerLifeDifference = playerLifeDifference;
     }
-
-    /**
-     * @return enemyLifeDifference is returned when getEnemyLifeDifference() is called.
-     */
     public float getEnemyLifeDifference() {
         return enemyLifeDifference;
     }
-
-    /**
-     * @param enemyLifeDifference is used to save the value that was to setEnemyLifeDifference()
-     */
     public void setEnemyLifeDifference(float enemyLifeDifference) {
         this.enemyLifeDifference = enemyLifeDifference;
     }
-
-    /**
-     * @return playerAction is returned when getPlayerAction() is called.
-     */
     public Types.combatActionResult getPlayerAction() {
         return playerAction;
     }
-
     public void setPlayerAction(Types.combatActionResult playerAction) {
         this.playerAction = playerAction;
     }
-
     public Types.combatActionResult getEnemyAction() {
         return enemyAction;
     }
-
     public void setEnemyAction(Types.combatActionResult enemyAction) {
         this.enemyAction = enemyAction;
     }
-
     public Item getPlayerItemUsed() {
         return playerItemUsed;
     }
-
     public void setPlayerItemUsed(Item playerItemUsed) {
         this.playerItemUsed = playerItemUsed;
     }
-
     public Item getEnemyItemUsed() {
         return enemyItemUsed;
     }
-
     public void setEnemyItemUsed(Item enemyItemUsed) {
         this.enemyItemUsed = enemyItemUsed;
     }
-
     public Boolean getEnemyHadFirstHit() {
         return enemyHadFirstHit;
     }
-
     public void setEnemyHadFirstHit(Boolean enemyHadFirstHit) {
         this.enemyHadFirstHit = enemyHadFirstHit;
     }

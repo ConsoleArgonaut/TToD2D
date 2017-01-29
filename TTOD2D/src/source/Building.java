@@ -38,30 +38,15 @@ public class Building {
         type = buildingType;
     }
 
-    /**
-     * @return the name of a building when called
-     */
     public String getName(){
         return name;
     }
-
-    /**
-     * @param buildingName assigns and saves the name of a building when a value s passed
-     */
     public void setName(String buildingName){
         name = buildingName;
     }
-
-    /**
-     * @return which value is assigned to the called building
-     */
     public Types.buildingType getType(){
         return type;
     }
-
-    /**
-     * @param buildingType assigns and saves the type of a building when it is passed.
-     */
     public void setType(Types.buildingType buildingType){
         type = buildingType;
     }

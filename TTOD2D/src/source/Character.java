@@ -9,25 +9,85 @@ import java.util.ArrayList;
  */
 
 public abstract class Character {
+    /**
+     * This variable is used to save the name of Player or Enemy respectably.
+     */
     private String name;
+    /**
+     * This variable is used to save the current health of Player or Enemy respectably.
+     */
     private float life;
+    /**
+     * This variable is used to save the maximum health of Player or Enemy respectably.
+     */
     private float maxLife;
+    /**
+     * This variable is used to save the defence of Player or Enemy respectably.
+     */
     private float defense;
+    /**
+     * This variable is used to save the attack of Player or Enemy respectably.
+     */
     private float attack;
+    /**
+     * This variable is used to save the level of Player.
+     */
     private int level;
+    /**
+     * This variable is used to save the status of Player or Enemy respectably.
+     */
     private Status status;
+    /**
+     * This variable is used to save the current mana count of Player.
+     */
     private float mana;
+    /**
+     * This variable is used to save the maximum mana count of Player.
+     */
     private float maxMana;
+    /**
+     * This variable is used to save the currently equipped armor of Player.
+     */
     private Armor armor;
+    /**
+     * This variable is used to save the currently equipped weapon of Player.
+     */
     private Weapon weapon;
+    /**
+     * This variable is used to save the currently equipped shield of Player.
+     */
     private Shield shield;
+    /**
+     * This variable is used to save the currently held items of Player or Enemy respectably.
+     */
     private ArrayList<Item> items;
+    /**
+     * This variable is used to save the currently held money of Player or Enemy respectably.
+     */
     private int money;
+    /**
+     * This variable is used to save the initiative of Player or Enemy respectably.
+     */
     private int initiative;
+    /**
+     * This variable is used to save the intelligence of Player or Enemy respectably.
+     */
     private float intelligence;
+    /**
+     * This variable is used to save the currently equipped focus of Player.
+     */
     private Focus focus;
+    /**
+     * This variable is used to save the selected gender of Player.
+     */
     private String gender;
+    /**
+     * This variable is used to save the image corresponding to the chosen race of the Players choosing.
+     */
     private String image;
+    /**
+     * This variable is used to save the currently unlocked skills of Player.
+     */
     private ArrayList<Skill> skills;
 
     public Character(){
@@ -95,5 +155,4 @@ public abstract class Character {
     public void setImage(String imageToSet){image = imageToSet;}
     public ArrayList<Skill> getSkills(){return skills;}
     public void setSkills(ArrayList<Skill> skillsToSet){skills = skillsToSet;}
-
 }

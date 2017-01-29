@@ -9,7 +9,17 @@ import java.util.ArrayList;
  */
 
 public class EnemyController {
+
+    /**
+     * This variable call's a new enemy to define the called enemy.
+     */
     private Enemy enemyToDefine = new Enemy();
+
+    /**
+     * This method is is used to define the enemies that exist in a dungeon by name.
+     * @param type Type is used to define the different enemy's by dungeonType.
+     * @return Returns the ArrayList enemies.
+     */
     public ArrayList<Enemy> getEnemies(Types.dungeonType type){
         ArrayList<Enemy> enemies = new ArrayList<>();
         if(type == Types.dungeonType.fire){
@@ -128,6 +138,12 @@ public class EnemyController {
         return enemies;
     }
 
+    /**
+     * This method is used define the enemies that are floor bosses ijn a dungeon by name
+     * @param type Type is used to define the different enemy's by dungeonType.
+     * @param currentFloor This parameter holds the value what floor the floor boss is to appear at.
+     * @return Returns the variable that is used to define all enemies.
+     */
     public Enemy getFloorBoss(Types.dungeonType type, int currentFloor){
         if(type == Types.dungeonType.fire){
             switch (currentFloor){
@@ -276,6 +292,11 @@ public class EnemyController {
         return enemyToDefine;
     }
 
+    /**
+     * This method is used define the enemies that are dungeon bosses ijn a dungeon by name.
+     * @param type Type is used to define the different enemy's by dungeonType.
+     * @return Returns the variable that is used to define all enemies.
+     */
     public Enemy getDungeonBoss(Types.dungeonType type){
         switch (type){
             case fire:
@@ -425,6 +446,11 @@ public class EnemyController {
         return enemyToDefine;
     }
 
+    /**
+     * This method is used define the enemies that are dungeon bosses ijn a dungeon by name.
+     * @param name Name is used to assign the Stats of the individual enemies.
+     * @return Returns returnValue.
+     */
     public Enemy getEnemyByName(String name){
         Enemy returnValue;
         switch (name){

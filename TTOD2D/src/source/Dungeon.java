@@ -59,10 +59,6 @@ public class Dungeon implements java.io.Serializable{
         generateFloors();
     }
 
-    /**
-     * This method gets the name of the current dungeon or returns standard dungeonname for dungeontype
-     * @return The name of the current dungeon.
-     */
     public String getName() {
         String returnValue = name;
         if(returnValue == "")
@@ -106,71 +102,30 @@ public class Dungeon implements java.io.Serializable{
             }
         return returnValue;
     }
-
-    /**
-     * Sets the name of the dungeon
-     * @param name The name to set
-     */
     public void setName(String name) {
         Dungeon.name = name;
     }
-
-    /**
-     * @return Returns the type when called.
-     */
     public Types.dungeonType getType() {
         return type;
     }
-
-    /**
-     * Sets the type of the dungeon.
-     * @param type The value to set.
-     */
     public void setType(Types.dungeonType type) {
         this.type = type;
     }
-
-    /**
-     * @return Returns the isCleared when called.
-     */
     public boolean isCleared() {
         return isCleared;
     }
-
-    /**
-     * Sets if the dungeon is cleared.
-     * @param cleared The value to set.
-     */
     public void setCleared(boolean cleared) {
         isCleared = cleared;
     }
-
-    /**
-     * @return Returns the floorCount when called.
-     */
     public ArrayList<Floor> getFloors() {
         return floors;
     }
-
-    /**
-     * Sets the floors.
-     * @param floors The floors to set.
-     */
     public void setFloors(ArrayList<Floor> floors) {
         this.floors = floors;
     }
-
-    /**
-     * @return Returns the floorCount when called.
-     */
     public int getFloorCount() {
         return floorCount;
     }
-
-    /**
-     * Sets the floor count.
-     * @param floorCount The floor count to set.
-     */
     public void setFloorCount(int floorCount) {
         this.floorCount = floorCount;
     }
