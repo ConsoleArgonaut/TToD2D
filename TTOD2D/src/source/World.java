@@ -124,8 +124,11 @@ public class World implements java.io.Serializable{
         witch.getItems().add(ItemController.getPoisonById(2));
         witch.getItems().add(ItemController.getPoisonById(3));
         witch.getItems().add(ItemController.getItemById(2));
+        witch.getItems().add(ItemController.getFocusById(1));
+        witch.getItems().add(ItemController.getFocusById(3));
         witch.getSentences().add("It's nice that witches are finally accepted as normal people");
         witch.getSentences().add("Witches are not able to cast magic. But we can create poisons and potions.");
+        witch.getSentences().add("Focus can be used to strengthen your magic skills.");
         witch.setMoney(200);
         shop.getTraders().add(witch);
         town.getShops().add(shop);
@@ -147,7 +150,7 @@ public class World implements java.io.Serializable{
         dungeons.add(new Dungeon(Types.dungeonType.wind, 5));
     }
 
-    private void generateDefaultPlayer(){
+    public void generateDefaultPlayer(){
         Weapon weapon1 = ItemController.getWeaponById(1);
         Player.getInstance().getItems().add(weapon1);
         Player.getInstance().setWeapon(weapon1);
