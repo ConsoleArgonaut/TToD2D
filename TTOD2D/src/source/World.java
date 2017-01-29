@@ -9,7 +9,15 @@ import java.util.ArrayList;
  */
 
 public class World implements java.io.Serializable{
+
+    /**
+     * This variable is used to save an ArrayList of dungeons.
+     */
     private ArrayList<Dungeon> dungeons;
+
+    /**
+     * This variable is used to save an ArrayList of towns.
+     */
     private ArrayList<Town> towns;
 
     public World (){
@@ -17,19 +25,16 @@ public class World implements java.io.Serializable{
         towns = new ArrayList<Town>();
     }
 
-    public World (ArrayList<Dungeon> dungeonsToSet, ArrayList<Town> townsToSet ){
-        dungeons = dungeonsToSet;
-        towns = townsToSet;
-    }
-
     public ArrayList<Dungeon> getDungeons(){
         return dungeons;
     }
-
     public ArrayList<Town> getTowns() {
         return towns;
     }
 
+    /**
+     * This method is used to initialise defaults.
+     */
     public void generateDefault(){
         generateDefaultTown1();
         generateDefaultTown2();
@@ -37,6 +42,9 @@ public class World implements java.io.Serializable{
         generateDefaultPlayer();
     }
 
+    /**
+     * This method is used to initialise Town defaults.
+     */
     private void generateDefaultTown1(){
         Town town = new Town();
         town.setName("Paladia");
@@ -72,6 +80,9 @@ public class World implements java.io.Serializable{
         towns.add(town);
     }
 
+    /**
+     * This method is used to initialise Town defaults.
+     */
     private void generateDefaultTown2(){
         Town town = new Town();
         town.setName("Necroma");
@@ -135,6 +146,9 @@ public class World implements java.io.Serializable{
         towns.add(town);
     }
 
+    /**
+     * This method is used to initialise Dungeon defaults.
+     */
     private void generateDefaultDungeons(){
         dungeons.add(new Dungeon(Types.dungeonType.darkness, 5));
         dungeons.add(new Dungeon(Types.dungeonType.earth, 5));
@@ -150,6 +164,9 @@ public class World implements java.io.Serializable{
         dungeons.add(new Dungeon(Types.dungeonType.wind, 5));
     }
 
+    /**
+     * This method is used to initialise Player defaults.
+     */
     public void generateDefaultPlayer(){
         Weapon weapon1 = ItemController.getWeaponById(1);
         Player.getInstance().getItems().add(weapon1);
