@@ -74,6 +74,11 @@ public class Main {
                             if(Player.getInstance().getArmor() == null || a.getDefence() > Player.getInstance().getArmor().getDefence())
                                 Player.getInstance().setArmor(a);
                             break;
+                        case Focus:
+                            Focus f = (Focus)i;
+                            if(Player.getInstance().getFocus() == null || f.getIntelligence() > Player.getInstance().getFocus().getIntelligence())
+                                Player.getInstance().setFocus(f);
+                            break;
                         default:
                             break;
                     }
@@ -84,6 +89,8 @@ public class Main {
                     writeline("Armor: " + Player.getInstance().getArmor().getName());
                 if(Player.getInstance().getShield() != null)
                     writeline("Shield: " + Player.getInstance().getShield().getName());
+                if(Player.getInstance().getFocus() != null)
+                    writeline("Focus: " + Player.getInstance().getFocus().getName());
             }
         }
     }
