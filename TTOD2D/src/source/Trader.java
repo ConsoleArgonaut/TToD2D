@@ -36,7 +36,9 @@ public class Trader extends NPC implements java.io.Serializable {
                     Player.getInstance().setShield(null);
                 Player.getInstance().getItems().remove(item);
                 getItems().add(item);
-                Player.getInstance().setMoney(Player.getInstance().getMoney() - getSellItemPrice(item));
+                int itemPrice = getSellItemPrice(item);
+                setMoney(getMoney() - itemPrice);
+                Player.getInstance().setMoney(Player.getInstance().getMoney() + itemPrice);
                 return true;
             }
             else
