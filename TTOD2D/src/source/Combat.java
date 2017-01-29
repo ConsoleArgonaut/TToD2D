@@ -444,7 +444,7 @@ public class Combat {
                         Player.getInstance().getItems().add(item);
                     }
                 Player.getInstance().setMoney(Player.getInstance().getMoney() + currentEnemy.getMoney());
-                Player.getInstance().addExperience(1);
+                Player.getInstance().addExperience();
             }
         }
         return result;
