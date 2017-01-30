@@ -8,7 +8,7 @@ import java.util.Random;
  * @since 1.0    16.12.2016
  */
 
-public class Combat {
+public class Combat implements ICombat {
 
     /**
      * This variable is used to pass the current enemy that is beeing fought in the damage calculation.
