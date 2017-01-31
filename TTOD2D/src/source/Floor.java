@@ -48,16 +48,18 @@ public class Floor implements java.io.Serializable {
 
     /**
      * This method is used to get the next combat instance if necessary
-     * @return Returns Combat(nextEnemy)
+     * @return Returns ICombat with next Enemy
      */
-    public Combat getNextCombat(){
+    public ICombat getNextCombat(){
         Enemy nextEnemy;
         if(enemiesDefeated == 5)
             nextEnemy = floorBoss.clone();
         else
             nextEnemy = enemies.get((int)(Math.random() * (enemies.size() - 1))).clone();
         enemiesDefeated++;
-        return new Combat(nextEnemy);
+        ICombat c = new EasyCombat();
+        c.setCurrentEnemy(nextEnemy);
+        return c;
     }
 
     public int getEnemiesDefeated() {

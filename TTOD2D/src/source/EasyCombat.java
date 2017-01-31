@@ -27,7 +27,7 @@ public class EasyCombat implements ICombat {
     public CombatResult attack(Skill skill) {
         startRound();
         if(Player.getInstance().getSkills().contains(skill) || Player.getInstance().getMana() < skill.getManaCost()){
-            Player.getInstance().setMana(Player.getInstance().getMaxMana() - skill.getManaCost());
+            Player.getInstance().setMana(Player.getInstance().getMana() - skill.getManaCost());
             switch(skill.getName()){
                 case "Double Strike":
                 case "Attack":
@@ -225,7 +225,6 @@ public class EasyCombat implements ICombat {
         return result;
     }
 
-
     /**
      * This method determines what happens at the start of a round.
      */
@@ -235,8 +234,8 @@ public class EasyCombat implements ICombat {
         //Calculate Enemy Move
         if (new Random().nextBoolean()){
             float attackValue = currentEnemy.getAttack();
-            attackValue = attackValue - (Player.getInstance().getDefense() / 2);
-            result.setPlayerLifeDifference(Player.getInstance().getMaxLife() * (attackValue / 200));
+            attackValue = attackValue - Player.getInstance().getDefense();
+            result.setPlayerLifeDifference(Player.getInstance().getMaxLife() * (attackValue / 1000));
             result.setEnemyAction(Types.combatActionResult.Attacked);
         }
         else if(new Random().nextBoolean())
@@ -244,7 +243,6 @@ public class EasyCombat implements ICombat {
         else
             result.setEnemyAction(Types.combatActionResult.Waited);
     }
-
 
     /**
      * This method does an attack from player to enemy.

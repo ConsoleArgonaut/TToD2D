@@ -283,9 +283,12 @@ public class Main {
         }
     }
 
+    private static boolean wentOutOfDungeon;
+
     private static void goToDungeon(Dungeon dungeon){
         boolean dungeonIsActive = true;
-        while(dungeonIsActive && gameIsActive){
+        wentOutOfDungeon = true;
+        while(dungeonIsActive && gameIsActive && wentOutOfDungeon){
             seperator();
             writeline("You are at: " + dungeon.getName());
             if(dungeon.isCleared()){
@@ -308,7 +311,7 @@ public class Main {
 
     private static void goToFloor(Floor floor){
         boolean floorIsActive = true;
-        while (floorIsActive && gameIsActive){
+        while (floorIsActive && gameIsActive && wentOutOfDungeon){
             seperator();
             if(floor.getEnemiesDefeated() >= 6){
                 writeline("Floor is cleared");
@@ -320,12 +323,13 @@ public class Main {
                 }
                 else{
                     floorIsActive = false;
+                    wentOutOfDungeon = false;
                 }
             }
         }
     }
 
-    private static void doCombat(Combat combat){
+    private static void doCombat(ICombat combat){
         boolean combatIsActive = true;
         while (combatIsActive){
             seperator();
@@ -397,6 +401,7 @@ public class Main {
             }
             if(result.getPlayerAction() == Types.combatActionResult.Escaped){
                 combatIsActive = false;
+                wentOutOfDungeon = false;
             }
         }
     }

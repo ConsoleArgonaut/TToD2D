@@ -14,7 +14,7 @@ public class FloorTest {
         floor.setEnemies(new EnemyController().getEnemies(Types.dungeonType.darkness));
         floor.setFloorBoss(new EnemyController().getFloorBoss(Types.dungeonType.darkness, 1));
         for (int i = 0; i < 5; i++) {
-            Combat c = floor.getNextCombat();
+            ICombat c = floor.getNextCombat();
             if(i == 5){
                 Assert.assertTrue(c.getCurrentEnemy().getName() == floor.getFloorBoss().getName());
             }

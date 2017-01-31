@@ -32,7 +32,7 @@ public class Player extends Character implements java.io.Serializable {
     }
 
     public Player() {
-        setMaxLife(1500);
+        setMaxLife(2000);
         setLife(getMaxLife());
         setDefense(30);
         setAttack(40);

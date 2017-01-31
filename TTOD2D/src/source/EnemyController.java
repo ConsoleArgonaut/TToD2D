@@ -300,147 +300,43 @@ public class EnemyController {
     public Enemy getDungeonBoss(Types.dungeonType type){
         switch (type){
             case fire:
-                enemyToDefine.setName("Salamander");
-                enemyToDefine.setMaxLife(1000);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(50);
-                enemyToDefine.setAttack(60);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(25);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Dragon);
+                enemyToDefine = getEnemyByName("Salamander");
                 break;
             case water:
-                enemyToDefine.setName("Levaiathan");
-                enemyToDefine.setMaxLife(800);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(50);
-                enemyToDefine.setAttack(50);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(25);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Dragon);
+                enemyToDefine = getEnemyByName("Levaiathan");
                 break;
             case earth:
-                enemyToDefine.setName("Earthgolem");
-                enemyToDefine.setMaxLife(1200);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(80);
-                enemyToDefine.setAttack(60);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(15);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Golem);
+                enemyToDefine = getEnemyByName("Earthgolem");
                 break;
             case wind:
-                enemyToDefine.setName("Windfiend");
-                enemyToDefine.setMaxLife(850);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(40);
-                enemyToDefine.setAttack(40);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(35);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Phantom);
+                enemyToDefine = getEnemyByName("Windfiend");
                 break;
             case ice:
-                enemyToDefine.setName("Icedrake");
-                enemyToDefine.setMaxLife(1000);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(50);
-                enemyToDefine.setAttack(65);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(25);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Dragon);
+                enemyToDefine = getEnemyByName("Icedrake");
                 break;
             case light:
-                enemyToDefine.setName("Monarch of Light");
-                enemyToDefine.setMaxLife(950);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(40);
-                enemyToDefine.setAttack(40);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(35);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Humanoid);
+                enemyToDefine = getEnemyByName("Monarch of Light");
                 break;
             case darkness:
-                enemyToDefine.setName("Monarch of Darkness");
-                enemyToDefine.setMaxLife(950);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(40);
-                enemyToDefine.setAttack(40);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(35);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Humanoid);
+                enemyToDefine = getEnemyByName("Monarch of Darkness");
                 break;
             case poison:
-                enemyToDefine.setName("Rafflesia");
-                enemyToDefine.setMaxLife(1400);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(40);
-                enemyToDefine.setAttack(40);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(25);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Plant);
+                enemyToDefine = getEnemyByName("Rafflesia");
                 break;
             case lightning:
-                enemyToDefine.setName("Thunderbird");
-                enemyToDefine.setMaxLife(900);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(60);
-                enemyToDefine.setAttack(40);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(30);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Bird);
+                enemyToDefine = getEnemyByName("Thunderbird");
                 break;
             case unaspected:
-                enemyToDefine.setName("Phantom");
-                enemyToDefine.setMaxLife(875);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(40);
-                enemyToDefine.setAttack(45);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(45);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Phantom);
+                enemyToDefine = getEnemyByName("Phantom");
                 break;
             case nature:
-                enemyToDefine.setName("Gaia");
-                enemyToDefine.setMaxLife(1450);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(40);
-                enemyToDefine.setAttack(75);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(25);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Titan);
+                enemyToDefine = getEnemyByName("Gaia");
                 break;
             case metal:
-                enemyToDefine.setName("Iron Golem");
-                enemyToDefine.setMaxLife(1750);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(80);
-                enemyToDefine.setAttack(60);
-                enemyToDefine.setIntelligence(10);
-                enemyToDefine.setInitiative(15);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Golem);
+                enemyToDefine = getEnemyByName("Iron Golem");
                 break;
             case death:
-                enemyToDefine.setName("Goran the Lich");
-                enemyToDefine.setMaxLife(1000);
-                enemyToDefine.setLife(enemyToDefine.getMaxLife());
-                enemyToDefine.setDefense(60);
-                enemyToDefine.setAttack(60);
-                enemyToDefine.setIntelligence(50);
-                enemyToDefine.setInitiative(40);
-                enemyToDefine.setMoney(2000);
-                enemyToDefine.setType(Types.enemyType.Lich);
+                enemyToDefine = getEnemyByName("Goran the Lich");
                 break;
         }
         return enemyToDefine;
@@ -455,82 +351,121 @@ public class EnemyController {
         Enemy returnValue;
         switch (name){
             case "Lizard":
-                returnValue = new Enemy("Lizard", 2000, 250, 350, 10, 10, 100, Types.enemyType.Dragon);
+                returnValue = new Enemy("Lizard", 2000, 25, 35, 10, 10, 100, Types.enemyType.Dragon);
                 break;
             case "Shepard":
-                returnValue = new Enemy("Shepard", 1, 1500, 1500, 10, 15, 100, Types.enemyType.Shepard);
+                returnValue = new Enemy("Shepard", 1, 1500, 150, 10, 15, 100, Types.enemyType.Shepard);
                 break;
             case "Steve":
                 returnValue = new Enemy("Steve", 100, 1, 1, 10, 15, 100, Types.enemyType.Steve);
                 break;
             case "Party Pooper":
-                returnValue = new Enemy("Party Pooper", 100, 300, 300, 10, 15, 100, Types.enemyType.Party_Pooper);
+                returnValue = new Enemy("Party Pooper", 100, 30, 30, 10, 15, 100, Types.enemyType.Party_Pooper);
                 break;
             case "Skeleton":
-                returnValue = new Enemy("Skeleton", 1600, 200, 200, 10, 15, 100, Types.enemyType.Undead);
+                returnValue = new Enemy("Skeleton", 1600, 20, 20, 10, 15, 100, Types.enemyType.Undead);
                 break;
             case "Pinguin":
-                returnValue = new Enemy("Pinguin", 2500, 500, 500, 10, 15, 100, Types.enemyType.Pinguin);
+                returnValue = new Enemy("Pinguin", 2500, 50, 50, 10, 15, 100, Types.enemyType.Pinguin);
                 break;
             case "Treant":
-                returnValue = new Enemy("Treant", 1800, 250, 350, 10, 15, 100, Types.enemyType.Treant);
+                returnValue = new Enemy("Treant", 1800, 25, 35, 10, 15, 100, Types.enemyType.Treant);
                 break;
             case "Dryad":
-                returnValue = new Enemy("Dryad", 1900, 300, 150, 10, 15, 100, Types.enemyType.Dryad);
+                returnValue = new Enemy("Dryad", 1900, 30, 15, 10, 15, 100, Types.enemyType.Dryad);
                 break;
             case "Light Lizard":
-                returnValue =new Enemy("Light Lizard", 2000, 250, 350, 10, 10, 100, Types.enemyType.Dragon);
+                returnValue =new Enemy("Light Lizard", 200, 25, 350, 10, 10, 100, Types.enemyType.Dragon);
                 break;
             case "Bandit":
-                returnValue = new Enemy("Bandit", 1750, 300, 300, 10, 15, 100, Types.enemyType.Humanoid);
+                returnValue = new Enemy("Bandit", 1750, 30, 30, 10, 15, 100, Types.enemyType.Humanoid);
                 break;
             case "Goblin":
-                returnValue = new Enemy("Goblin", 1750, 300, 300, 10, 15, 100, Types.enemyType.Goblinoid);
+                returnValue = new Enemy("Goblin", 1750, 30, 30, 10, 15, 100, Types.enemyType.Goblinoid);
                 break;
             case "Spider":
-                returnValue = new Enemy("Spider", 1500, 300, 300, 10, 25, 100, Types.enemyType.Creature);
+                returnValue = new Enemy("Spider", 1500, 30, 30, 10, 25, 100, Types.enemyType.Creature);
                 break;
             case "HoboLin":
-                returnValue = new Enemy("HoboLin", 1750, 300, 300, 10, 15, 100, Types.enemyType.Goblinoid);
+                returnValue = new Enemy("HoboLin", 1750, 30, 30, 10, 15, 100, Types.enemyType.Goblinoid);
                 break;
             case "Iron Lizard":
-                returnValue = new Enemy("Iron Lizard", 2000, 250, 350, 10, 10, 100, Types.enemyType.Dragon);
+                returnValue = new Enemy("Iron Lizard", 2000, 25, 35, 10, 10, 100, Types.enemyType.Dragon);
                 break;
             case "Iron Spider":
-                returnValue = new Enemy("Iron Spider", 1500, 300, 300, 10, 25, 100, Types.enemyType.Creature);
+                returnValue = new Enemy("Iron Spider", 1500, 30, 30, 10, 25, 100, Types.enemyType.Creature);
                 break;
             case "Firelizards":
-                returnValue = new Enemy("Firelizards", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Firelizards", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "Waterserpent":
-                returnValue = new Enemy("Waterserpent", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Waterserpent", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "Gustfiend":
-                returnValue = new Enemy("Gustfiend", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Gustfiend", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "Icewurm":
-                returnValue = new Enemy("Icewurm", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Icewurm", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "General of Light":
-                returnValue = new Enemy("General of Light", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("General of Light", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "Iron Protectors":
-                returnValue = new Enemy("Iron Protectors", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Iron Protectors", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "Nature Guardian":
-                returnValue = new Enemy("Nature Guardian", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Nature Guardian", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "Banditlord":
-                returnValue = new Enemy("Banditlord", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Banditlord", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "Lightningbird":
-                returnValue = new Enemy("Lightningbird", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Lightningbird", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "Roppers":
-                returnValue = new Enemy("Roppers", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("Roppers", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
                 break;
             case "General of Darkness":
-                returnValue = new Enemy("General of Darkness", 5000, 300, 400, 10, 20, 500, Types.enemyType.Dragon);
+                returnValue = new Enemy("General of Darkness", 5000, 30, 40, 10, 20, 500, Types.enemyType.Dragon);
+                break;
+            case "Rafflesia":
+                returnValue = new Enemy("Rafflesia", 7000, 40, 40, 10, 25, 2000, Types.enemyType.Plant);
+                break;
+            case "Monarch of Darkness":
+                returnValue = new Enemy("Monarch of Darkness", 7500, 40, 40, 10, 35, 2000, Types.enemyType.Humanoid);
+                break;
+            case "Monarch of Light":
+                returnValue = new Enemy("Monarch of Light", 9500, 40, 40, 10, 35, 2000, Types.enemyType.Humanoid);
+                break;
+            case "Salamander":
+                returnValue = new Enemy("Salamander", 8000, 50, 60, 10, 25, 2000, Types.enemyType.Dragon);
+                break;
+            case "Levaiathan":
+                returnValue = new Enemy("Levaiathan", 8350, 50, 50, 10, 25, 2000, Types.enemyType.Dragon);
+                break;
+            case "Earthgolem":
+                returnValue = new Enemy("Earthgolem", 6900, 80, 60, 10, 15, 2000, Types.enemyType.Golem);
+                break;
+            case "Windfiend":
+                returnValue = new Enemy("Windfiend", 8500, 40, 40, 10, 35, 2000, Types.enemyType.Phantom);
+                break;
+            case "Icedrake":
+                returnValue = new Enemy("Icedrake", 7000, 50, 65, 10, 25, 2000, Types.enemyType.Dragon);
+                break;
+            case "Goran the Lich":
+                returnValue = new Enemy("Goran the Lich", 11350, 60, 60, 50, 40, 4000, Types.enemyType.Lich);
+                break;
+            case "Iron Golem":
+                returnValue = new Enemy("Iron Golem", 6750, 80, 60, 10, 15, 2000, Types.enemyType.Golem);
+                break;
+            case "Gaia":
+                returnValue = new Enemy("Gaia", 8450, 40, 75, 10, 25, 2000, Types.enemyType.Titan);
+                break;
+            case "Phantom":
+                returnValue = new Enemy("Phantom", 8875, 40, 45, 10, 45, 2000, Types.enemyType.Phantom);
+                break;
+            case "Thunderbird":
+                returnValue = new Enemy("Thunderbird", 7900, 60, 40, 10, 30, 2000, Types.enemyType.Bird);
                 break;
             default:
                 returnValue = getEnemyByName("Steve");
