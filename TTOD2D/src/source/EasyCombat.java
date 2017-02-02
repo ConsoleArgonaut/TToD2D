@@ -38,6 +38,7 @@ public class EasyCombat implements ICombat {
                 case "Shadow Orb":
                 case "Netherworld":
                     doAttack(skill.getPotency(), null);
+                    break;
                 case "Defence":
                     result.setPlayerAction(Types.combatActionResult.Defended);
                     if(result.getEnemyAction() == Types.combatActionResult.Attacked)
@@ -260,6 +261,7 @@ public class EasyCombat implements ICombat {
         result.setEnemyLifeDifference(currentEnemy.getMaxLife() * (percentage / 200));
         if(effect != null)
             currentEnemy.setStatus(new StatusController().getStatus(effect));
+        result.setPlayerAction(Types.combatActionResult.Attacked);
     }
 
     /**
