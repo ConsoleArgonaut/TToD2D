@@ -26,26 +26,25 @@ public class Trader extends NPC implements java.io.Serializable {
     }
 
     public boolean sellItem(Item item){
-        if(Player.getInstance().getMoney() > getSellItemPrice(item)){
-            if(Player.getInstance().getItems().contains(item)) {
-                if(Player.getInstance().getArmor() == item)
-                    Player.getInstance().setArmor(null);
-                if(Player.getInstance().getWeapon() == item)
-                    Player.getInstance().setWeapon(null);
-                if(Player.getInstance().getShield() == item)
-                    Player.getInstance().setShield(null);
-                Player.getInstance().getItems().remove(item);
-                getItems().add(item);
-                int itemPrice = getSellItemPrice(item);
-                setMoney(getMoney() - itemPrice);
-                Player.getInstance().setMoney(Player.getInstance().getMoney() + itemPrice);
-                return true;
-            }
-            else
-                return false;
+        if(Player.getInstance().getItems().contains(item)) {
+            if (Player.getInstance().getArmor() == item)
+                Player.getInstance().setArmor(null);
+            if (Player.getInstance().getWeapon() == item)
+                Player.getInstance().setWeapon(null);
+            if (Player.getInstance().getShield() == item)
+                Player.getInstance().setShield(null);
+            Player.getInstance().getItems().remove(item);
+            getItems().add(item);
+            int itemPrice = getSellItemPrice(item);
+            setMoney(getMoney() - itemPrice);
+            Player.getInstance().setMoney(Player.getInstance().getMoney() + itemPrice);
+            if(getMoney() < 0)
+                setMoney(0);
+            return true;
         }
         else
             return false;
+
     }
 
     public boolean buyItem(Item item){

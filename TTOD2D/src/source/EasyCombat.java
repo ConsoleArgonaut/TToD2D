@@ -222,6 +222,8 @@ public class EasyCombat implements ICombat {
                 Player.getInstance().getItems().add(i);
             }
         }
+        if(currentEnemy.getLife() <= 0)
+            Player.getInstance().setMoney(Player.getInstance().getMoney() + currentEnemy.getMoney());
         return result;
     }
 
