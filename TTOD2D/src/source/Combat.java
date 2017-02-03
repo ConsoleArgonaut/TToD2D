@@ -438,7 +438,7 @@ public class Combat implements ICombat {
                     currentEnemy.setLife(currentEnemy.getLife() - (new StatusController().getStatus(Types.effect.Freezing).getPotency()));
                 }
             }
-            if (currentEnemy.getLife() > 0) {
+            if (currentEnemy.getLife() < 0) {
                 if (currentEnemy.getItems().size() > 0)
                     for (Item item : currentEnemy.getItems()) {
                         Player.getInstance().getItems().add(item);

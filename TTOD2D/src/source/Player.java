@@ -73,7 +73,6 @@ public class Player extends Character implements java.io.Serializable {
     public void addExperience(){
         Player.getInstance().setExperience(Player.getInstance().getExperience() + (Player.getInstance().getNextLevel() / 14));
         Player.getInstance().levelUp();
-        SkillController.getSkill(Player.getInstance().getLevel());
     }
 
     /**
@@ -83,6 +82,7 @@ public class Player extends Character implements java.io.Serializable {
         if(Player.getInstance().getExperience() >= Player.getInstance().getNextLevel()){
             Player.getInstance().setLevel(Player.getInstance().getLevel() + 1);
             Player.getInstance().setNextLevel(Player.getInstance().getNextLevel() * 3);
+            SkillController.getSkill(Player.getInstance().getLevel());
         }
     }
 
