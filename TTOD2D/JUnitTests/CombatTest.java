@@ -27,10 +27,9 @@ public class CombatTest {
         boolean attackMissed = true;
         while (attackMissed){
             CombatResult c = combat.attack(Player.getInstance().getSkills().get(0));
-            if(c.getPlayerAction() == Types.combatActionResult.Attacked)
+            if(c.getPlayerAction() == Types.combatActionResult.Attacked && combat.getCurrentEnemy().getLife() < enemyLife)
                 attackMissed = false;
         }
-        Assert.assertTrue(combat.getCurrentEnemy().getLife() < enemyLife);
     }
 
     @Test
