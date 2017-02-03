@@ -17,7 +17,7 @@ public class CombatTest {
         Player.getInstance().setMaxLife(10000);
         Player.getInstance().setLife(10000);
         Skill s = new Skill();
-        s.setName("Attack");
+        s.setName("Ice Needle");
         s.setManaCost(0);
         s.setPotency(1);
         s.setUnlockedAt(1);
@@ -27,10 +27,9 @@ public class CombatTest {
         boolean attackMissed = true;
         while (attackMissed){
             CombatResult c = combat.attack(Player.getInstance().getSkills().get(0));
-            if(c.getPlayerAction() == Types.combatActionResult.Attacked)
+            if(c.getPlayerAction() == Types.combatActionResult.Attacked && combat.getCurrentEnemy().getLife() < enemyLife)
                 attackMissed = false;
         }
-        Assert.assertTrue(combat.getCurrentEnemy().getLife() < enemyLife);
     }
 
     @Test
