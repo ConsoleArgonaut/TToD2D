@@ -405,11 +405,11 @@ public class Combat implements ICombat {
         result.setEnemyAction(Types.combatActionResult.Attacked);
 
         //Calculates Damage
-        result.setPlayerLifeDifference(currentEnemy.getAttack() - (Player.getInstance().getDefense() + (Player.getInstance().getArmor() != null ? Player.getInstance().getArmor().getDefence() : 0)) + (Player.getInstance().getShield() != null ? Player.getInstance().getShield().getDefence() : 0));
+        result.setPlayerLifeDifference(result.getPlayerLifeDifference() >= 0 ?currentEnemy.getAttack() - (Player.getInstance().getDefense() + (Player.getInstance().getArmor() != null ? Player.getInstance().getArmor().getDefence() : 0)) + (Player.getInstance().getShield() != null ? Player.getInstance().getShield().getDefence() : 0): 1);
         reposte = result.getPlayerLifeDifference();
         if (!result.getEnemyHadFirstHit() && result.getPlayerAction() == Types.combatActionResult.Defended)
-            result.setPlayerLifeDifference(result.getPlayerLifeDifference() - (Player.getInstance().getDefense() + (Player.getInstance().getArmor() != null ? Player.getInstance().getArmor().getDefence() : 0)) / 100 * result.getPlayerLifeDifference());
-        //Deals Damage to enemy
+            result.setPlayerLifeDifference(result.getPlayerLifeDifference() >= 0 ? result.getPlayerLifeDifference() - (Player.getInstance().getDefense() + (Player.getInstance().getArmor() != null ? Player.getInstance().getArmor().getDefence() : 0)) / 100 * result.getPlayerLifeDifference(): 1);
+        //Deals Damage to Player
         if (result.getPlayerLifeDifference() >= 0)
             Player.getInstance().setLife(Player.getInstance().getLife() - result.getPlayerLifeDifference());
         else {
