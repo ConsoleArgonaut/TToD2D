@@ -7,7 +7,7 @@ import org.junit.runner.notification.Failure;
  */
 public class TestRunner {
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(CombatTestSuite.class);
+        Result result = JUnitCore.runClasses(TestSuite.class);
 
         if(result.getFailureCount() > 0){
             for (Failure failure : result.getFailures()) {
