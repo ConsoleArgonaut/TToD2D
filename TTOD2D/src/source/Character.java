@@ -1,5 +1,6 @@
 package source;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -8,7 +9,7 @@ import java.util.ArrayList;
  * @since 1.0    16.12.2016
  */
 
-public abstract class Character {
+public abstract class Character implements Serializable {
     /**
      * This variable is used to save the name of Player or Enemy respectably.
      */

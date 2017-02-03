@@ -92,4 +92,8 @@ public class Player extends Character implements java.io.Serializable {
     public void resetPlayer(){
         ourInstance = new Player();
     }
+
+    public void setPlayer(Player player){
+        ourInstance = player;
+    }
 }

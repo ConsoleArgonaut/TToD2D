@@ -65,7 +65,7 @@ public class FileHandler {
     }
 
     private void loadPlayer(){
-        Player player = new Player();
+        Player player;
 
         try {
             FileInputStream fileIn = new FileInputStream(filePath + PLAYER_FILE);
@@ -74,6 +74,9 @@ public class FileHandler {
             in.close();
             fileIn.close();
 
+            Player.getInstance().setPlayer(player);
+
+            /*
             Player.getInstance().setRace(player.getRace());
             Player.getInstance().setMaxLife(player.getMaxLife());
             Player.getInstance().setExperience(player.getExperience());
@@ -97,6 +100,7 @@ public class FileHandler {
             Player.getInstance().setShield(player.getShield());
             Player.getInstance().setStatus(player.getStatus());
             Player.getInstance().setWeapon(player.getWeapon());
+            */
         }catch(Exception e) {
             e.printStackTrace();
         }

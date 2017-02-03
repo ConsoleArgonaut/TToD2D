@@ -1,12 +1,14 @@
 package source;
 
+import java.io.Serializable;
+
 /**
  * @author Drake
  * @version 1.0
  * @since 1.0    16.12.2016
  */
 
-public class Status {
+public class Status implements Serializable {
 
     /**
      * This method is used to save the name of a status.
