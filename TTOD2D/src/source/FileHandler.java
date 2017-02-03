@@ -20,7 +20,7 @@ public class FileHandler {
     private static final String PLAYER_FILE = "player.ser";
 
     /**
-     * This streing wll be used to get the Filepath.
+     * This String wll be used to get the Filepath.
      */
     private String filePath;
 
