@@ -9,14 +9,30 @@ import java.io.*;
  */
 
 public class FileHandler {
+    /**
+     * Tis String is used to save the world state.
+     */
     private static final String WORLD_FILE = "world.ser";
+
+    /**
+     * This String is used to save the Player state.
+     */
     private static final String PLAYER_FILE = "player.ser";
+
+    /**
+     * This streing wll be used to get the Filepath.
+     */
     private String filePath;
 
     public FileHandler(){
         filePath = new java.io.File(".").getAbsolutePath();
     }
 
+    /**
+     * This method is used to save the state of the world.
+     * @param world World passes world to the method.
+     * @return Returns true or false.
+     */
     public boolean saveGame(World world){
         savePlayer();
 
@@ -35,6 +51,10 @@ public class FileHandler {
         return false;
     }
 
+    /**
+     * This method is used to load world.ser.
+     * @return Returns world.
+     */
     public World loadGame(){
         World world = new World();
         loadPlayer();
@@ -52,6 +72,9 @@ public class FileHandler {
         return world;
     }
 
+    /**
+     * This method is used to save Player to player.ser.
+     */
     private void savePlayer(){
         try {
             FileOutputStream fileOut = new FileOutputStream(filePath + PLAYER_FILE);
@@ -64,6 +87,9 @@ public class FileHandler {
         }
     }
 
+    /**
+     * This method is used to load player.ser.
+     */
     private void loadPlayer(){
         Player player;
 
